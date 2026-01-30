@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqb1h8ybgavwj" path="res://Assets/telon.png" id="1_gl6un"]
 [ext_resource type="Script" uid="uid://6qb7nbkuvahr" path="res://Scenes/game.gd" id="1_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kldst"]
 font_size = 50
@@ -13,15 +14,21 @@ font_size = 64
 [sub_resource type="LabelSettings" id="LabelSettings_b2bpf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
-font_size = 24
+font_size = 76
 
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1271411577]
+[node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
 position = Vector2(575, 216.5)
 scale = Vector2(11.979167, 4.4895835)
 texture = ExtResource("1_gl6un")
+
+[node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
+visible = false
+position = Vector2(572.99994, 134.5)
+scale = Vector2(17.812498, 6.197917)
+texture = ExtResource("3_kldst")
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
 position = Vector2(0, -19)
@@ -269,12 +276,14 @@ one_shot = true
 autostart = true
 
 [node name="TiempoRestante" type="ProgressBar" parent="." unique_id=286496479]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 3.0
+offset_top = 180.0
 offset_right = 1147.0
-offset_bottom = 27.0
+offset_bottom = 207.0
 grow_horizontal = 2
 show_percentage = false
 
@@ -283,12 +292,22 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_left = -36.5
+offset_top = -110.0
+offset_right = 36.5
+offset_bottom = 65.0
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_7lihs")
 
+[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
+offset_left = 520.0
+offset_top = 244.0
+offset_right = 602.0
+offset_bottom = 275.0
+text = "¡A cantar!"
+
 [connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
 [connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
+[connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
+[connection signal="pressed" from="ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
