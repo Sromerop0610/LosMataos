@@ -10,9 +10,17 @@ config_version=5
 
 [application]
 
-config/name="FallaAlFallo"
+config/name="MalagaJam26"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "green",
+"res://Scenes/": "teal",
+"res://Scripts/": "purple"
+}
 
 [physics]
 
