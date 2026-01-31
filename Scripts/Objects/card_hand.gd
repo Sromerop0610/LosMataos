@@ -12,7 +12,7 @@ func crear_carta_aleatoria() -> carta_base:
 
 	var data: Dictionary = card_pool.generar_carta_aleatoria(fase_actual)
 	var carta: carta_base = carta_scene.instantiate()
-	carta.crear_carta(data)
+	#carta.crear_carta(data)
 	add_child(carta)
 	return carta
 

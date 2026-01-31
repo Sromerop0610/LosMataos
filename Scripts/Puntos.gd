@@ -1,5 +1,6 @@
 
 class Puntuacion:
+	var fase: int
 	var letras: int
 	var afinacion: int
 	var componentes: int
@@ -32,6 +33,9 @@ class Puntuacion:
 				return rangoD
 			else:
 				return rangoE
-		
-		
+
+	func resetPuntuaciones():
+		fase = 0
+		letras = 0
+		afinacion = 0
 		

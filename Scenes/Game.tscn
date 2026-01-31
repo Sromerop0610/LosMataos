@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://6mauwgpfjbv5" path="res://Assets/escenario.png" id="2_b2bpf"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
+[ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
 [ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
 [ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
 
@@ -57,10 +58,10 @@ tracks/0/path = NodePath("PreShow/HelpLabel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4),
+"times": PackedFloat32Array(0, 1.9666667, 3.9333334),
 "transitions": PackedFloat32Array(1.1486989, 1.1486989, 1.1486989),
 "update": 0,
-"values": [Vector2(321, 53), Vector2(321, 72.32), Vector2(321, 53)]
+"values": [Vector2(321, 70), Vector2(321, 100), Vector2(321, 70)]
 }
 
 [sub_resource type="Animation" id="Animation_7lihs"]
@@ -101,7 +102,6 @@ scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-visible = false
 position = Vector2(478.99997, 201.00002)
 scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")
@@ -127,7 +127,7 @@ offset_right = 480.5
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.8666667)
 
 [node name="ButtonAyuda" type="Button" parent="PreShow" unique_id=1999960461]
 layout_mode = 0
@@ -172,10 +172,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -13.5
-offset_top = 159.5
-offset_right = 29.5
-offset_bottom = 264.5
+offset_left = -422.5
+offset_top = 54.5
+offset_right = -379.5
+offset_bottom = 159.5
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_7lihs")
@@ -187,12 +187,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.500015
-offset_top = 70.5
-offset_right = 22.499985
-offset_bottom = 101.5
+offset_left = 355.5
+offset_top = -148.0
+offset_right = 437.5
+offset_bottom = -117.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.4333234, 1.4333234)
 text = "¡A cantar!"
 
 [node name="HelpLabel" type="Label" parent="PreShow" unique_id=1366538110]
@@ -205,10 +206,17 @@ anchor_bottom = 0.5
 offset_left = -161.5
 offset_top = -211.0
 offset_right = 169.5
-offset_bottom = -187.99998
+offset_bottom = -188.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.1861482, 1.1861482)
 text = "¡Escoge cartas para mejorar tu agrupación!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="PreShow" unique_id=1842046057]
+position = Vector2(460, 468)
+script = ExtResource("5_2irst")
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
 position = Vector2(454, 464.99997)
@@ -436,15 +444,6 @@ text = "Entendido"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2031352524]
 libraries/ = SubResource("AnimationLibrary_b2bpf")
 
-[connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
-[connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
-[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
-offset_left = 520.0
-offset_top = 244.0
-offset_right = 602.0
-offset_bottom = 275.0
-text = "¡A cantar!"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1207672741]
 stream = ExtResource("5_7lihs")
 autoplay = true
@@ -454,7 +453,7 @@ parameters/looping = true
 stream = ExtResource("6_fgofq")
 parameters/looping = true
 
-[connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
-[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
+[connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
+[connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
 [connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
 [connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]

@@ -10,14 +10,14 @@ extends Node2D
 @onready var pre_show = $PreShow
 @onready var animation_player = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	tiempo_restante.max_value = tiempo_de_ronda.wait_time
 	GlobalSignals.StartingShow.connect(start_show)
 	animation_player.play("hintTextMove")
+	GlobalSignals.GameWon.connect(pasar_de_ronda)
+	GlobalSignals.GameLost.connect(game_over)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	tiempo_restante.value = tiempo_de_ronda.time_left
 	segundos_label.text = str(int(tiempo_restante.value))
 
@@ -37,7 +37,15 @@ func start_show():
 func _on_tiempo_de_ronda_timeout():
 	GlobalSignals.StartingShow.emit()
 
-
 func _on_button_a_cantar_pressed():
 	tiempo_de_ronda.stop()
 	_on_tiempo_de_ronda_timeout()
+
+func pasar_de_ronda():
+	Puntos.resetPuntuaciones()
+	Puntos.fase +=1
+	if Puntos.fase==4:
+		get_tree().change_scene_to_file("res://Scenes/pantalla_victoria.tscn")
+
+func game_over():
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
