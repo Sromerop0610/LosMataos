@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqb1h8ybgavwj" path="res://Assets/telon.png" id="1_gl6un"]
 [ext_resource type="Script" uid="uid://6qb7nbkuvahr" path="res://Scenes/game.gd" id="1_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://6mauwgpfjbv5" path="res://Assets/escenario.png" id="2_b2bpf"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
 
@@ -86,6 +87,12 @@ _data = {
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
 
+[node name="Escenario" type="Sprite2D" parent="." unique_id=1783653983]
+modulate = Color(0.6847319, 0.6847319, 0.6847319, 1)
+position = Vector2(478.5, 200)
+scale = Vector2(1.595, 1.2375)
+texture = ExtResource("2_b2bpf")
+
 [node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
 position = Vector2(481.5, 125.99998)
 scale = Vector2(14.953125, 5.7916665)
@@ -98,7 +105,6 @@ scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")
 
 [node name="PreShow" type="Control" parent="." unique_id=1525962351]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -2.0
@@ -208,142 +214,142 @@ scale = Vector2(0.826654, 0.69795346)
 
 [node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
 position = Vector2(-494.51624, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person2" type="Sprite2D" parent="Publico" unique_id=1212556167]
 position = Vector2(-404.51624, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person3" type="Sprite2D" parent="Publico" unique_id=1102785926]
 position = Vector2(-319.51624, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person4" type="Sprite2D" parent="Publico" unique_id=597539734]
 position = Vector2(-238.51624, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person5" type="Sprite2D" parent="Publico" unique_id=1905797537]
 position = Vector2(-158.51624, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person6" type="Sprite2D" parent="Publico" unique_id=1739119696]
 position = Vector2(-80.516235, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person7" type="Sprite2D" parent="Publico" unique_id=1022270183]
 position = Vector2(-3.5162354, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person8" type="Sprite2D" parent="Publico" unique_id=495151412]
 position = Vector2(74.483765, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person9" type="Sprite2D" parent="Publico" unique_id=109118406]
 position = Vector2(151.48376, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person10" type="Sprite2D" parent="Publico" unique_id=173279940]
 position = Vector2(229.4837, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person11" type="Sprite2D" parent="Publico" unique_id=747764155]
 position = Vector2(309.48376, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person12" type="Sprite2D" parent="Publico" unique_id=1672697550]
 position = Vector2(390.48376, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person13" type="Sprite2D" parent="Publico" unique_id=1870051931]
 position = Vector2(473.48383, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person14" type="Sprite2D" parent="Publico" unique_id=1180901286]
 position = Vector2(561.48376, 57.575848)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person15" type="Sprite2D" parent="Publico" unique_id=1622111385]
 position = Vector2(-494.51624, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person16" type="Sprite2D" parent="Publico" unique_id=263153196]
 position = Vector2(-404.51624, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person17" type="Sprite2D" parent="Publico" unique_id=1682583271]
 position = Vector2(-319.51624, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person18" type="Sprite2D" parent="Publico" unique_id=369559655]
 position = Vector2(-238.51624, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person19" type="Sprite2D" parent="Publico" unique_id=4460864]
 position = Vector2(-158.51624, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person20" type="Sprite2D" parent="Publico" unique_id=121272798]
 position = Vector2(-80.516235, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person21" type="Sprite2D" parent="Publico" unique_id=723106344]
 position = Vector2(-3.5162354, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person22" type="Sprite2D" parent="Publico" unique_id=1705769285]
 position = Vector2(74.483765, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person23" type="Sprite2D" parent="Publico" unique_id=1008854670]
 position = Vector2(151.48376, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person24" type="Sprite2D" parent="Publico" unique_id=576327337]
 position = Vector2(229.4837, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person25" type="Sprite2D" parent="Publico" unique_id=2018503949]
 position = Vector2(309.48376, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person26" type="Sprite2D" parent="Publico" unique_id=151739805]
 position = Vector2(390.48376, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person27" type="Sprite2D" parent="Publico" unique_id=2138932564]
 position = Vector2(473.48383, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="Person28" type="Sprite2D" parent="Publico" unique_id=1578635429]
 position = Vector2(561.48376, -46.674152)
-scale = Vector2(4.591, 4.591)
+scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]

@@ -15,7 +15,7 @@ func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Game.tscn")
 
 func _ready():
-	if OS.get_name() = "Web":
+	if OS.get_name() == "Web":
 		quit_button.hide()
 
 func _on_volver_pressed():
