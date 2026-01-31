@@ -5,7 +5,13 @@
 [sub_resource type="LabelSettings" id="LabelSettings_csqe3"]
 font_size = 64
 
-[node name="MenúPrincipal" type="Control" unique_id=71079035]
+[sub_resource type="LabelSettings" id="LabelSettings_xcfe6"]
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_tf4ic"]
+font_size = 48
+
+[node name="MenuPrincipal" type="Control" unique_id=71079035]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tf4ic")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=187782141]
+[node name="BotonesMenu" type="VBoxContainer" parent="." unique_id=187782141]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -29,24 +35,96 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=500840459]
+[node name="Label" type="Label" parent="BotonesMenu" unique_id=500840459]
 layout_mode = 2
 text = "FALLA AL FALLO"
 label_settings = SubResource("LabelSettings_csqe3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1627495329]
+[node name="PlayButton" type="Button" parent="BotonesMenu" unique_id=1627495329]
 layout_mode = 2
 text = "Jugar"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=1015501448]
+[node name="OptionsButton" type="Button" parent="BotonesMenu" unique_id=1015501448]
 layout_mode = 2
 text = "Opciones"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1864546777]
+[node name="QuitButton" type="Button" parent="BotonesMenu" unique_id=1864546777]
 layout_mode = 2
 text = "Salir"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="CreditosButton" type="Button" parent="BotonesMenu" unique_id=1018915566]
+layout_mode = 2
+text = "Créditos"
+
+[node name="Creditos" type="Control" parent="." unique_id=1625181191]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Creditos" type="Label" parent="Creditos" unique_id=538366905]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.5
+offset_top = -141.0
+offset_right = 215.5
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Un juego de Los Mataos
+
+Javier Jiménez-Alfaro Hacha - Producción, Programación
+Sara - Arte
+Víctor - Programación, Sonido
+Sergio - Programación
+Óscar - Programación, Diseño
+Pablo - Diseño
+"
+label_settings = SubResource("LabelSettings_xcfe6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Titulo" type="Label" parent="Creditos" unique_id=1379377244]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.5
+offset_top = -257.0
+offset_right = 185.5
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "FALLA AL FALLO"
+label_settings = SubResource("LabelSettings_tf4ic")
+
+[node name="Volver" type="Button" parent="Creditos" unique_id=288019907]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -74.0
+offset_right = 4.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Volver al menú"
+
+[connection signal="pressed" from="BotonesMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="BotonesMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="BotonesMenu/CreditosButton" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="Creditos/Volver" to="." method="_on_volver_pressed"]
