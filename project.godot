@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MalagaJam26"
-run/main_scene="uid://wg5gilbtcw6p"
+run/main_scene="uid://cs8ng15wu6v6e"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 GlobalSignals="*uid://dmp1lompkbtkd"
 Inventario="*uid://sm4os5d6arwh"
 Puntos="*uid://b4w8ekud63yxw"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
 
 [file_customization]
 
