@@ -8,13 +8,13 @@
 [sub_resource type="LabelSettings" id="LabelSettings_kldst"]
 font_size = 50
 
+[sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
+font_size = 76
+
 [sub_resource type="LabelSettings" id="LabelSettings_j5yw3"]
 font_size = 64
 
 [sub_resource type="LabelSettings" id="LabelSettings_b2bpf"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
-font_size = 76
 
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
@@ -197,6 +197,43 @@ label_settings = SubResource("LabelSettings_kldst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="TiempoRestante" type="ProgressBar" parent="." unique_id=286496479]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 3.0
+offset_top = 180.0
+offset_right = 1147.0
+offset_bottom = 207.0
+grow_horizontal = 2
+show_percentage = false
+
+[node name="SegundosLabel" type="Label" parent="TiempoRestante" unique_id=1239767035]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.5
+offset_top = -110.0
+offset_right = 36.5
+offset_bottom = 65.0
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_7lihs")
+
+[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
+offset_left = 520.0
+offset_top = 244.0
+offset_right = 602.0
+offset_bottom = 275.0
+text = "¡A cantar!"
+
 [node name="HelpLayer" type="Control" parent="." unique_id=742079439]
 visible = false
 layout_mode = 3
@@ -270,44 +307,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Entendido"
 
-[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
-wait_time = 30.0
-one_shot = true
-autostart = true
-
-[node name="TiempoRestante" type="ProgressBar" parent="." unique_id=286496479]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 3.0
-offset_top = 180.0
-offset_right = 1147.0
-offset_bottom = 207.0
-grow_horizontal = 2
-show_percentage = false
-
-[node name="SegundosLabel" type="Label" parent="TiempoRestante" unique_id=1239767035]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -36.5
-offset_top = -110.0
-offset_right = 36.5
-offset_bottom = 65.0
-grow_horizontal = 2
-text = "0"
-label_settings = SubResource("LabelSettings_7lihs")
-
-[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
-offset_left = 520.0
-offset_top = 244.0
-offset_right = 602.0
-offset_bottom = 275.0
-text = "¡A cantar!"
-
 [connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
-[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
 [connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
 [connection signal="pressed" from="ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
+[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
