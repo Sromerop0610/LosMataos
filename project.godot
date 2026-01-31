@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalSignals="*uid://dmp1lompkbtkd"
+Inventario="*uid://sm4os5d6arwh"
+Puntos="*uid://b4w8ekud63yxw"
 
 [display]
 
