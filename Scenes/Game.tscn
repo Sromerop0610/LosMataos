@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://6mauwgpfjbv5" path="res://Assets/escenario.png" id="2_b2bpf"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
+[ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
 [ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
 [ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
 
@@ -212,6 +213,10 @@ scale = Vector2(1.1861482, 1.1861482)
 text = "¡Escoge cartas para mejorar tu agrupación!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="PreShow" unique_id=1842046057]
+position = Vector2(460, 468)
+script = ExtResource("5_2irst")
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
 position = Vector2(454, 464.99997)
