@@ -55,10 +55,10 @@ tracks/0/path = NodePath("PreShow/HelpLabel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4),
+"times": PackedFloat32Array(0, 1.9666667, 3.9333334),
 "transitions": PackedFloat32Array(1.1486989, 1.1486989, 1.1486989),
 "update": 0,
-"values": [Vector2(321, 53), Vector2(321, 72.32), Vector2(321, 53)]
+"values": [Vector2(321, 70), Vector2(321, 100), Vector2(321, 70)]
 }
 
 [sub_resource type="Animation" id="Animation_7lihs"]
@@ -99,7 +99,6 @@ scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-visible = false
 position = Vector2(478.99997, 201.00002)
 scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")
@@ -125,7 +124,7 @@ offset_right = 480.5
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.8666667)
 
 [node name="ButtonAyuda" type="Button" parent="PreShow" unique_id=1999960461]
 layout_mode = 0
@@ -170,10 +169,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -13.5
-offset_top = 159.5
-offset_right = 29.5
-offset_bottom = 264.5
+offset_left = -422.5
+offset_top = 54.5
+offset_right = -379.5
+offset_bottom = 159.5
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_7lihs")
@@ -185,12 +184,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.500015
-offset_top = 70.5
-offset_right = 22.499985
-offset_bottom = 101.5
+offset_left = 355.5
+offset_top = -148.0
+offset_right = 437.5
+offset_bottom = -117.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.4333234, 1.4333234)
 text = "¡A cantar!"
 
 [node name="HelpLabel" type="Label" parent="PreShow" unique_id=1366538110]
@@ -203,10 +203,13 @@ anchor_bottom = 0.5
 offset_left = -161.5
 offset_top = -211.0
 offset_right = 169.5
-offset_bottom = -187.99998
+offset_bottom = -188.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.1861482, 1.1861482)
 text = "¡Escoge cartas para mejorar tu agrupación!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
 position = Vector2(454, 464.99997)

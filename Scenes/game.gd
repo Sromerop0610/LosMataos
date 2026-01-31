@@ -10,14 +10,12 @@ extends Node2D
 @onready var pre_show = $PreShow
 @onready var animation_player = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	tiempo_restante.max_value = tiempo_de_ronda.wait_time
 	GlobalSignals.StartingShow.connect(start_show)
 	animation_player.play("hintTextMove")
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	tiempo_restante.value = tiempo_de_ronda.time_left
 	segundos_label.text = str(int(tiempo_restante.value))
 
