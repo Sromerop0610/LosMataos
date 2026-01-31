@@ -243,6 +243,7 @@ grow_vertical = 2
 text = "¡A cantar!"
 
 [node name="HelpLayer" type="Control" parent="." unique_id=742079439]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -314,6 +315,20 @@ offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Entendido"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=695855773]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 398.0
+offset_right = 954.0
+offset_bottom = 532.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.9529412, 0.7411765, 0.11764706, 0.7490196)
 
 [connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
 [connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
