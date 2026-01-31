@@ -1,8 +1,9 @@
 extends Node2D
 
-@export var mano: Array[carta_base] = []
-
 const MANO_MAXIMA: int = 3
+const CARTAS_POOL := card_pool.CARTAS
+
+var mano: Array = []
 
 func robar_carta():
 	while mano.size() < MANO_MAXIMA:
