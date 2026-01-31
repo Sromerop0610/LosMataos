@@ -16,8 +16,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
-ñ
+
 GlobalSignals="*uid://dmp1lompkbtkd"
+Inventario="*uid://sm4os5d6arwh"
+Puntos="*uid://b4w8ekud63yxw"
 
 [file_customization]
 
