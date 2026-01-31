@@ -16,171 +16,117 @@ font_size = 64
 
 [sub_resource type="LabelSettings" id="LabelSettings_b2bpf"]
 
+[sub_resource type="Animation" id="Animation_b2bpf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow/HelpLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(321, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PreShow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kldst"]
+resource_name = "hintTextMove"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow/HelpLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1.1486989, 1.1486989, 1.1486989),
+"update": 0,
+"values": [Vector2(321, 53), Vector2(321, 72.32), Vector2(321, 53)]
+}
+
+[sub_resource type="Animation" id="Animation_7lihs"]
+resource_name = "show_start"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2bpf"]
+_data = {
+&"RESET": SubResource("Animation_b2bpf"),
+&"hintTextMove": SubResource("Animation_kldst"),
+&"show_start": SubResource("Animation_7lihs")
+}
+
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
 
-[node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-position = Vector2(481.50003, 203.5)
-scale = Vector2(10.031251, 4.21875)
-texture = ExtResource("1_gl6un")
-
 [node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
-visible = false
 position = Vector2(481.5, 125.99998)
 scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
-[node name="Publico" type="Node2D" parent="." unique_id=1375024485]
-position = Vector2(6.000001, 81)
-scale = Vector2(0.826654, 0.69795346)
+[node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
+position = Vector2(478.99997, 201.00002)
+scale = Vector2(10.031251, 4.21875)
+texture = ExtResource("1_gl6un")
 
-[node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
-position = Vector2(45, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="PreShow" type="Control" parent="." unique_id=1525962351]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 963.0
+offset_bottom = 529.0
 
-[node name="Person2" type="Sprite2D" parent="Publico" unique_id=1212556167]
-position = Vector2(135, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="ColorRect" type="ColorRect" parent="PreShow" unique_id=695855773]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -481.5
+offset_top = -137.0
+offset_right = 480.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
 
-[node name="Person3" type="Sprite2D" parent="Publico" unique_id=1102785926]
-position = Vector2(220, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="ButtonAyuda" type="Button" parent="PreShow" unique_id=1999960461]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 26.0
+offset_right = 932.0
+offset_bottom = 101.0
 
-[node name="Person4" type="Sprite2D" parent="Publico" unique_id=597539734]
-position = Vector2(301, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person5" type="Sprite2D" parent="Publico" unique_id=1905797537]
-position = Vector2(381, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person6" type="Sprite2D" parent="Publico" unique_id=1739119696]
-position = Vector2(459, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person7" type="Sprite2D" parent="Publico" unique_id=1022270183]
-position = Vector2(536, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person8" type="Sprite2D" parent="Publico" unique_id=495151412]
-position = Vector2(614, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person9" type="Sprite2D" parent="Publico" unique_id=109118406]
-position = Vector2(691, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person10" type="Sprite2D" parent="Publico" unique_id=173279940]
-position = Vector2(768.99994, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person11" type="Sprite2D" parent="Publico" unique_id=747764155]
-position = Vector2(849, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person12" type="Sprite2D" parent="Publico" unique_id=1672697550]
-position = Vector2(930, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person13" type="Sprite2D" parent="Publico" unique_id=1870051931]
-position = Vector2(1013.00006, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person14" type="Sprite2D" parent="Publico" unique_id=1180901286]
-position = Vector2(1101, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person15" type="Sprite2D" parent="Publico" unique_id=1622111385]
-position = Vector2(45, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person16" type="Sprite2D" parent="Publico" unique_id=263153196]
-position = Vector2(135, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person17" type="Sprite2D" parent="Publico" unique_id=1682583271]
-position = Vector2(220, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person18" type="Sprite2D" parent="Publico" unique_id=369559655]
-position = Vector2(301, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person19" type="Sprite2D" parent="Publico" unique_id=4460864]
-position = Vector2(381, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person20" type="Sprite2D" parent="Publico" unique_id=121272798]
-position = Vector2(459, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person21" type="Sprite2D" parent="Publico" unique_id=723106344]
-position = Vector2(536, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person22" type="Sprite2D" parent="Publico" unique_id=1705769285]
-position = Vector2(614, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person23" type="Sprite2D" parent="Publico" unique_id=1008854670]
-position = Vector2(691, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person24" type="Sprite2D" parent="Publico" unique_id=576327337]
-position = Vector2(768.99994, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person25" type="Sprite2D" parent="Publico" unique_id=2018503949]
-position = Vector2(849, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person26" type="Sprite2D" parent="Publico" unique_id=151739805]
-position = Vector2(930, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person27" type="Sprite2D" parent="Publico" unique_id=2138932564]
-position = Vector2(1013.00006, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person28" type="Sprite2D" parent="Publico" unique_id=1578635429]
-position = Vector2(1101, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="ButtonAyuda" type="Button" parent="." unique_id=1999960461]
-offset_left = 869.0
-offset_top = 12.0
-offset_right = 939.0
-offset_bottom = 87.0
-
-[node name="Label" type="Label" parent="ButtonAyuda" unique_id=1565324698]
+[node name="Label" type="Label" parent="PreShow/ButtonAyuda" unique_id=1565324698]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -198,49 +144,210 @@ label_settings = SubResource("LabelSettings_kldst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
-wait_time = 30.0
-one_shot = true
-autostart = true
-
-[node name="TiempoRestante" type="ProgressBar" parent="." unique_id=286496479]
+[node name="TiempoRestante" type="ProgressBar" parent="PreShow" unique_id=286496479]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 3.0
-offset_top = 180.0
-offset_right = 946.0
-offset_bottom = 207.0
+offset_left = -498.5
+offset_top = -23.5
+offset_right = 444.5
+offset_bottom = 3.5
 grow_horizontal = 2
 show_percentage = false
 
-[node name="SegundosLabel" type="Label" parent="TiempoRestante" unique_id=1239767035]
+[node name="SegundosLabel" type="Label" parent="PreShow/TiempoRestante" unique_id=1239767035]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -13.5
-offset_top = -76.0
+offset_top = 159.5
 offset_right = 29.5
-offset_bottom = 29.0
+offset_bottom = 264.5
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_7lihs")
 
-[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
+[node name="ButtonACantar" type="Button" parent="PreShow" unique_id=1424554422]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 442.0
-offset_top = 294.0
-offset_right = 524.0
-offset_bottom = 325.0
+offset_left = -59.500015
+offset_top = 70.5
+offset_right = 22.499985
+offset_bottom = 101.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "¡A cantar!"
+
+[node name="HelpLabel" type="Label" parent="PreShow" unique_id=1366538110]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -211.0
+offset_right = 169.5
+offset_bottom = -187.99998
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Escoge cartas para mejorar tu agrupación!"
+
+[node name="Publico" type="Node2D" parent="." unique_id=1375024485]
+position = Vector2(454, 464.99997)
+scale = Vector2(0.826654, 0.69795346)
+
+[node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
+position = Vector2(-494.51624, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person2" type="Sprite2D" parent="Publico" unique_id=1212556167]
+position = Vector2(-404.51624, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person3" type="Sprite2D" parent="Publico" unique_id=1102785926]
+position = Vector2(-319.51624, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person4" type="Sprite2D" parent="Publico" unique_id=597539734]
+position = Vector2(-238.51624, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person5" type="Sprite2D" parent="Publico" unique_id=1905797537]
+position = Vector2(-158.51624, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person6" type="Sprite2D" parent="Publico" unique_id=1739119696]
+position = Vector2(-80.516235, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person7" type="Sprite2D" parent="Publico" unique_id=1022270183]
+position = Vector2(-3.5162354, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person8" type="Sprite2D" parent="Publico" unique_id=495151412]
+position = Vector2(74.483765, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person9" type="Sprite2D" parent="Publico" unique_id=109118406]
+position = Vector2(151.48376, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person10" type="Sprite2D" parent="Publico" unique_id=173279940]
+position = Vector2(229.4837, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person11" type="Sprite2D" parent="Publico" unique_id=747764155]
+position = Vector2(309.48376, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person12" type="Sprite2D" parent="Publico" unique_id=1672697550]
+position = Vector2(390.48376, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person13" type="Sprite2D" parent="Publico" unique_id=1870051931]
+position = Vector2(473.48383, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person14" type="Sprite2D" parent="Publico" unique_id=1180901286]
+position = Vector2(561.48376, 46.828876)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person15" type="Sprite2D" parent="Publico" unique_id=1622111385]
+position = Vector2(-494.51624, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person16" type="Sprite2D" parent="Publico" unique_id=263153196]
+position = Vector2(-404.51624, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person17" type="Sprite2D" parent="Publico" unique_id=1682583271]
+position = Vector2(-319.51624, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person18" type="Sprite2D" parent="Publico" unique_id=369559655]
+position = Vector2(-238.51624, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person19" type="Sprite2D" parent="Publico" unique_id=4460864]
+position = Vector2(-158.51624, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person20" type="Sprite2D" parent="Publico" unique_id=121272798]
+position = Vector2(-80.516235, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person21" type="Sprite2D" parent="Publico" unique_id=723106344]
+position = Vector2(-3.5162354, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person22" type="Sprite2D" parent="Publico" unique_id=1705769285]
+position = Vector2(74.483765, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person23" type="Sprite2D" parent="Publico" unique_id=1008854670]
+position = Vector2(151.48376, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person24" type="Sprite2D" parent="Publico" unique_id=576327337]
+position = Vector2(229.4837, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person25" type="Sprite2D" parent="Publico" unique_id=2018503949]
+position = Vector2(309.48376, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person26" type="Sprite2D" parent="Publico" unique_id=151739805]
+position = Vector2(390.48376, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person27" type="Sprite2D" parent="Publico" unique_id=2138932564]
+position = Vector2(473.48383, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person28" type="Sprite2D" parent="Publico" unique_id=1578635429]
+position = Vector2(561.48376, -57.421124)
+scale = Vector2(0.2359375, 0.23593752)
+texture = ExtResource("2_j5yw3")
+
+[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
+wait_time = 30.0
+one_shot = true
+autostart = true
 
 [node name="HelpLayer" type="Control" parent="." unique_id=742079439]
 visible = false
@@ -316,21 +423,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Entendido"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=695855773]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = 398.0
-offset_right = 954.0
-offset_bottom = 532.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0.9529412, 0.7411765, 0.11764706, 0.7490196)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2031352524]
+libraries/ = SubResource("AnimationLibrary_b2bpf")
 
-[connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
+[connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
+[connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
 [connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
-[connection signal="pressed" from="ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
 [connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
