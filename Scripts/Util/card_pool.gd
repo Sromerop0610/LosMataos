@@ -369,10 +369,6 @@ static func generar_carta_aleatoria(fase: int) -> Dictionary:
 		if carta.get("fase", -1) == fase:
 			cartas_fase.append(carta)
 	
-	if cartas_fase.is_empty():
-		push_error("No hay cartas para la fase: " + str(fase))
-		return {}
-	
 	var indice_aleatorio := randi() % cartas_fase.size()
 	return cartas_fase[indice_aleatorio]
 

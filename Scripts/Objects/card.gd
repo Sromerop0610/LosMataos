@@ -1,5 +1,6 @@
 class_name carta_base
 extends Sprite2D
+@onready var button = $Button
 
 @export var id: String
 @export var title: String
@@ -7,6 +8,9 @@ extends Sprite2D
 @export var componentes: int
 @export var afinacion: int
 @export var ruta_sprite: String
+
+func _ready():
+	print(self)
 
 func crear_carta(data: Dictionary) -> void:
 	self.id = data.get("id", "")
@@ -19,3 +23,11 @@ func crear_carta(data: Dictionary) -> void:
 
 func play(target: Node) -> void:
 	pass
+
+func disable_button():
+	button.disabled = true
+
+func _on_button_pressed():
+	print("Carta robada")
+	Inventario.llenarInventario(self)
+	GlobalSignals.cartaRobada.emit()

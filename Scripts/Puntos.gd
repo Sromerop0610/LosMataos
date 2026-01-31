@@ -1,3 +1,4 @@
+extends Node
 
 class Puntuacion:
 	var fase: int

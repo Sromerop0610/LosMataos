@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://bcuhau6dr806v"]
 
+[ext_resource type="Texture2D" uid="uid://c8k83o3dcgvdx" path="res://icon.svg" id="1_5v8d1"]
 [ext_resource type="Script" uid="uid://djmc5cujmbcd2" path="res://Scripts/Objects/card.gd" id="1_yasdf"]
 
 [node name="carta" type="Sprite2D" unique_id=620246183]
+z_index = 1
+texture = ExtResource("1_5v8d1")
 script = ExtResource("1_yasdf")
+
+[node name="Button" type="Button" parent="." unique_id=380362697]
+offset_left = -75.0
+offset_top = -73.0
+offset_right = 76.0
+offset_bottom = 76.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

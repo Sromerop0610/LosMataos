@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqb1h8ybgavwj" path="res://Assets/telon.png" id="1_gl6un"]
 [ext_resource type="Script" uid="uid://6qb7nbkuvahr" path="res://Scenes/game.gd" id="1_j5yw3"]
-[ext_resource type="Texture2D" uid="uid://6mauwgpfjbv5" path="res://Assets/escenario.png" id="2_b2bpf"]
+[ext_resource type="Texture2D" uid="uid://cnnxibj1c4x5g" path="res://Assets/escenario.svg" id="2_2irst"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
 [ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
@@ -64,6 +64,22 @@ tracks/0/keys = {
 "values": [Vector2(321, 70), Vector2(321, 100), Vector2(321, 70)]
 }
 
+[sub_resource type="Animation" id="Animation_2irst"]
+resource_name = "round_start"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333344, 3.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_7lihs"]
 resource_name = "show_start"
 length = 5.0
@@ -84,6 +100,7 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_b2bpf"),
 &"hintTextMove": SubResource("Animation_kldst"),
+&"round_start": SubResource("Animation_2irst"),
 &"show_start": SubResource("Animation_7lihs")
 }
 
@@ -94,7 +111,7 @@ script = ExtResource("1_j5yw3")
 modulate = Color(0.6847319, 0.6847319, 0.6847319, 1)
 position = Vector2(478.5, 200)
 scale = Vector2(1.595, 1.2375)
-texture = ExtResource("2_b2bpf")
+texture = ExtResource("2_2irst")
 
 [node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
 position = Vector2(481.5, 125.99998)
@@ -102,6 +119,7 @@ scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
+visible = false
 position = Vector2(478.99997, 201.00002)
 scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")
@@ -153,6 +171,10 @@ text = "?"
 label_settings = SubResource("LabelSettings_kldst")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="mano" type="Node2D" parent="PreShow" unique_id=1436745308]
+position = Vector2(2, -1)
+script = ExtResource("5_2irst")
 
 [node name="TiempoRestante" type="ProgressBar" parent="PreShow" unique_id=286496479]
 self_modulate = Color(1, 1, 1, 0)
@@ -213,10 +235,6 @@ scale = Vector2(1.1861482, 1.1861482)
 text = "¡Escoge cartas para mejorar tu agrupación!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Node2D" type="Node2D" parent="PreShow" unique_id=1842046057]
-position = Vector2(460, 468)
-script = ExtResource("5_2irst")
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
 position = Vector2(454, 464.99997)
@@ -363,7 +381,7 @@ scale = Vector2(4.591, 5.326)
 texture = ExtResource("2_j5yw3")
 
 [node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
-wait_time = 30.0
+wait_time = 4000.0
 one_shot = true
 autostart = true
 

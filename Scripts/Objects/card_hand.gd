@@ -3,7 +3,7 @@ extends Node2D
 const MANO_MAXIMA: int = 3
 
 const carta_scene = preload("res://Scenes/carta.tscn")
-
+@export var sepCarta = 200
 var mano: Array = []
 var inventario_jugador: Array = []
 var fase_actual: int = 0
@@ -17,17 +17,24 @@ func crear_carta_aleatoria() -> carta_base:
 	return carta
 
 func robar_carta():
-	flush_mano(mano)
+	print("robando cartas")
+	flush_mano()
 	mano.clear()
-	
-	while mano.size() < MANO_MAXIMA:
+	for i in range(MANO_MAXIMA):
 		var carta := crear_carta_aleatoria()
+		carta.global_position.x = 280 + (200*i);
+		carta.global_position.y= 450;
+	
 		mano.append(carta)
 	return mano
 
-func flush_mano(mano_ref: Array):
-	for carta in mano_ref:
+func flush_mano():
+	for carta in mano:
 		carta.queue_free()
+		
+func disable_mano():
+	for carta in mano:
+		carta.disable_button()
 
 func inventario_ronda(carta_seleccionada: carta_base):
 	var carta_data := {
@@ -43,11 +50,12 @@ func inventario_ronda(carta_seleccionada: carta_base):
 	print("Carta añadida: ", carta_data.title)
 	print("Total en inventario: ", inventario_jugador.size())
 
-	flush_mano(mano)
+	flush_mano()
 	mano.clear()
 	robar_carta()
 
 func _ready() -> void:
+	GlobalSignals.cartaRobada.connect(robar_carta)
 	robar_carta()
 
 func _process(delta: float) -> void:
