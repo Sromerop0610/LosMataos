@@ -358,7 +358,17 @@ const CARTAS: Array[Dictionary] = [
 		"afinacion": 150,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 3
+	},
+		{
+		"id": "especial_martinez",
+		"title": "Martinez Ares",
+		"puntos_letras": -100,
+		"componentes": 1,
+		"afinacion": 150,
+		"ruta_sprite": "res://icon.svg",
+		"fase": 4
 	}
+	
 ]
 
 # Filtra cartas por fase y devuelve una aleatoria
@@ -368,7 +378,6 @@ static func generar_carta_aleatoria(fase: int) -> Dictionary:
 	for carta in CARTAS:
 		if carta.get("fase", -1) == fase:
 			cartas_fase.append(carta)
-	
 	var indice_aleatorio := randi() % cartas_fase.size()
 	return cartas_fase[indice_aleatorio]
 
