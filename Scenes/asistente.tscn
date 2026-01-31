@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b48xmg3ypfdkd"]
+
+[ext_resource type="Texture2D" uid="uid://c8k83o3dcgvdx" path="res://icon.svg" id="1_kl1v0"]
+[ext_resource type="Script" uid="uid://bx7uwkv6dphw2" path="res://Scripts/asistente.gd" id="2_7va6s"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1190394997]
+texture = ExtResource("1_kl1v0")
+script = ExtResource("2_7va6s")
+
+[node name="Timer" type="Timer" parent="." unique_id=870189418]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

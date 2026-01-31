@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="MalagaJam26"
-run/main_scene="uid://cs8ng15wu6v6e"
+run/main_scene="uid://wg5gilbtcw6p"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
-
+ñ
 GlobalSignals="*uid://dmp1lompkbtkd"
 
 [file_customization]
