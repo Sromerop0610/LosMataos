@@ -1,6 +1,6 @@
 class_name card_pool
 extends Resource
-	
+
 const CARTAS: Array[Dictionary] = [
 	
 	# BASICAS - Fase de preliminares
@@ -360,3 +360,32 @@ const CARTAS: Array[Dictionary] = [
 		"fase": 3
 	}
 ]
+
+# Filtra cartas por fase y devuelve una aleatoria
+static func generar_carta_aleatoria(fase: int) -> Dictionary:
+	var cartas_fase: Array[Dictionary] = []
+	
+	for carta in CARTAS:
+		if carta.get("fase", -1) == fase:
+			cartas_fase.append(carta)
+	
+	if cartas_fase.is_empty():
+		push_error("No hay cartas para la fase: " + str(fase))
+		return {}
+	
+	var indice_aleatorio := randi() % cartas_fase.size()
+	return cartas_fase[indice_aleatorio]
+
+# Devuelve todas las cartas de una fase específica
+static func obtener_cartas_por_fase(fase: int) -> Array[Dictionary]:
+	var cartas_fase: Array[Dictionary] = []
+	
+	for carta in CARTAS:
+		if carta.get("fase", -1) == fase:
+			cartas_fase.append(carta)
+	
+	return cartas_fase
+
+# Devuelve el total de cartas disponibles en una fase
+static func contar_cartas_fase(fase: int) -> int:
+	return obtener_cartas_por_fase(fase).size()
