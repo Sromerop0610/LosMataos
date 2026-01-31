@@ -16,8 +16,8 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
-ñ
-GlobalSignals="*uid://dmp1lompkbtkd"
+
+"Ã±GlobalSignals"="*uid://dmp1lompkbtkd"
 
 [file_customization]
 
