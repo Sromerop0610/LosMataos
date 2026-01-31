@@ -20,18 +20,19 @@ font_size = 64
 script = ExtResource("1_j5yw3")
 
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-position = Vector2(575, 216.5)
-scale = Vector2(11.979167, 4.4895835)
+position = Vector2(481.50003, 203.5)
+scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")
 
 [node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
 visible = false
-position = Vector2(572.99994, 134.5)
-scale = Vector2(17.812498, 6.197917)
+position = Vector2(481.5, 125.99998)
+scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
 [node name="Publico" type="Node2D" parent="." unique_id=1375024485]
-position = Vector2(0, -19)
+position = Vector2(6.000001, 81)
+scale = Vector2(0.826654, 0.69795346)
 
 [node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
 position = Vector2(45, 600.85315)
@@ -174,9 +175,9 @@ scale = Vector2(0.2359375, 0.23593752)
 texture = ExtResource("2_j5yw3")
 
 [node name="ButtonAyuda" type="Button" parent="." unique_id=1999960461]
-offset_left = 1070.0
+offset_left = 869.0
 offset_top = 12.0
-offset_right = 1140.0
+offset_right = 939.0
 offset_bottom = 87.0
 
 [node name="Label" type="Label" parent="ButtonAyuda" unique_id=1565324698]
@@ -209,7 +210,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 3.0
 offset_top = 180.0
-offset_right = 1147.0
+offset_right = 946.0
 offset_bottom = 207.0
 grow_horizontal = 2
 show_percentage = false
@@ -219,23 +220,29 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -36.5
-offset_top = -110.0
-offset_right = 36.5
-offset_bottom = 65.0
+offset_left = -13.5
+offset_top = -76.0
+offset_right = 29.5
+offset_bottom = 29.0
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_7lihs")
 
 [node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
-offset_left = 520.0
-offset_top = 244.0
-offset_right = 602.0
-offset_bottom = 275.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 442.0
+offset_top = 294.0
+offset_right = 524.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "¡A cantar!"
 
 [node name="HelpLayer" type="Control" parent="." unique_id=742079439]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -247,6 +254,7 @@ offset_right = 1153.0
 offset_bottom = 646.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8388487, 0.8388487)
 
 [node name="ColorRect" type="ColorRect" parent="HelpLayer" unique_id=781198762]
 layout_mode = 1
