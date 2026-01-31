@@ -10,8 +10,9 @@ var mano: Array = []
 
 func crear_carta_aleatoria() -> carta_base:
 	var data: Dictionary = CARTAS_POOL.pick_random()
-	var carta = carta_scene.instantiate()
+	var carta: carta_base = carta_scene.instantiate()
 	carta.crear_carta(data)
+	add_child(carta)
 	return carta
 
 func robar_carta():
@@ -27,8 +28,8 @@ func flush_mano(mano):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	robar_carta()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
