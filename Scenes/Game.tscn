@@ -8,6 +8,11 @@
 [ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
 [ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
 [ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
+[ext_resource type="AudioStream" uid="uid://qfrv8nbjkk4x" path="res://Assets/LasMunecas.mp3" id="9_3cx6b"]
+[ext_resource type="AudioStream" uid="uid://bxmeq042l2str" path="res://Assets/LosRobin.mp3" id="10_wxwew"]
+[ext_resource type="AudioStream" uid="uid://d2lel454wgtwi" path="res://Assets/murmulloDesvaneciendo.mp3" id="11_acvyw"]
+[ext_resource type="AudioStream" uid="uid://csqkx6gslkyfu" path="res://Assets/BooAplausoWhistle.mp3" id="12_alh3a"]
+[ext_resource type="AudioStream" uid="uid://bx3qoddjem4sj" path="res://Assets/Abucheo.mp3" id="13_4q8tf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kldst"]
 font_size = 50
@@ -461,14 +466,31 @@ text = "Entendido"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2031352524]
 libraries/ = SubResource("AnimationLibrary_b2bpf")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1207672741]
+[node name="Choniketes" type="AudioStreamPlayer2D" parent="." unique_id=1207672741]
 stream = ExtResource("5_7lihs")
 autoplay = true
 parameters/looping = true
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1125367659]
+[node name="Carniceria" type="AudioStreamPlayer2D" parent="." unique_id=1125367659]
 stream = ExtResource("6_fgofq")
 parameters/looping = true
+
+[node name="Munecas" type="AudioStreamPlayer2D" parent="." unique_id=1090266153]
+stream = ExtResource("9_3cx6b")
+parameters/looping = true
+
+[node name="Robin" type="AudioStreamPlayer2D" parent="." unique_id=224782917]
+stream = ExtResource("10_wxwew")
+parameters/looping = true
+
+[node name="Murmullo" type="AudioStreamPlayer2D" parent="." unique_id=1148502806]
+stream = ExtResource("11_acvyw")
+
+[node name="Vitoreo" type="AudioStreamPlayer2D" parent="." unique_id=850448311]
+stream = ExtResource("12_alh3a")
+
+[node name="Abucheo" type="AudioStreamPlayer2D" parent="." unique_id=1553010328]
+stream = ExtResource("13_4q8tf")
 
 [connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
 [connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]

@@ -68,6 +68,10 @@ func pasar_de_ronda():
 	button_ayuda.show()
 	tiempo_de_ronda.start()
 	print(Puntos.fase)
+	
+#func cambiar_musica():
+#	if pasar_de_ronda():
+		
 
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
