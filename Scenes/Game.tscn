@@ -104,6 +104,9 @@ _data = {
 &"show_start": SubResource("Animation_7lihs")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_2irst"]
+font_size = 32
+
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
 
@@ -428,20 +431,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -570.5394
+offset_top = -115.5
+offset_right = 569.1178
+offset_bottom = 115.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Tu objetivo es pasar de ronda, acumulando todos los puntos posibles.
+text = "Falla al Fallo
+          Instrucciones básicas del juego
 
-Tienes 3 cartas en la parte inferior de la pantalla, de las que puedes escoger una, y así varias veces.
+El juego se desarrolla en cuatro niveles distintos, cada uno más difícil que el anterior.
+Tu objetivo en cada nivel es tener un número entre dos en la categoría de Componentes y también llegar a la puntuación requerida que se pedirá en cada nivel (Los puntos se sumarán mediante la barra de Letra y Afinación). Todo esto dentro del tiempo límite que se imponga.
 
-Cuando se acabe el tiempo (o le des al botón \"A cantar!\") el juzgado y el público te evaluará."
+Nota importante: Este juego es mental, lo que significa que en ningún momento podrás ver cuantos puntos llevas, así qué tendrás que pañartelas como puedas para ganar."
 label_settings = SubResource("LabelSettings_b2bpf")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="ButtonEntendido" type="Button" parent="HelpLayer" unique_id=733797044]
 layout_mode = 1
@@ -469,6 +475,51 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1125367659]
 stream = ExtResource("6_fgofq")
 parameters/looping = true
+
+[node name="Recuentos Puntuacion" type="Control" parent="." unique_id=647169497]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 46.0
+offset_right = 991.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ComponentesLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1412751170]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 81.0
+offset_right = 356.0
+offset_bottom = 222.0
+text = "COMPONENTES:"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
+
+[node name="AfinacionLabel" type="Label" parent="Recuentos Puntuacion" unique_id=54236078]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 149.0
+offset_right = 347.0
+offset_bottom = 290.0
+text = "AFINACIÓN:
+"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
+
+[node name="LetraLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1540186337]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 176.0
+offset_right = 347.0
+offset_bottom = 317.0
+text = "LETRA:"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
 
 [connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
 [connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]

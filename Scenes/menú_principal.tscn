@@ -48,7 +48,7 @@ text = "Jugar"
 
 [node name="OptionsButton" type="Button" parent="BotonesMenu" unique_id=1015501448]
 layout_mode = 2
-text = "Opciones"
+text = "Cómo Jugar"
 
 [node name="QuitButton" type="Button" parent="BotonesMenu" unique_id=1864546777]
 layout_mode = 2

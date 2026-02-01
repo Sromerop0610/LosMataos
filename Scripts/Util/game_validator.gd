@@ -88,19 +88,22 @@ static func calcular_rango(puntos: int, puntos_objetivo: int) -> String:
 	else:
 		return "E"
 
-static func resumen_inventario(inventario: Array) -> String:
+static func resumen_inventario() -> Array:
 	var total_letra: int = 0
 	var total_afinacion: int = 0
 	var total_componentes: int = 0
-	
-	for carta in inventario:
+	var pointsArray = [total_componentes,total_afinacion,total_componentes]
+
+	for carta in Inventario.inventario:
 		total_letra += carta.get("puntos_letras", 0)
 		total_afinacion += carta.get("afinacion", 0)
 		total_componentes += carta.get("componentes", 0)
-	
-	return "Cartas: %d | Letra: %d | Afinación: %d | Componentes: %d" % [
-		inventario.size(),
-		total_letra,
-		total_afinacion,
-		total_componentes
-	]
+	return pointsArray
+
+	#
+	#return "Cartas: %d | Letra: %d | Afinación: %d | Componentes: %d" % [
+		#Inventario.inventario.size(),
+		#total_letra,
+		#total_afinacion,
+		#total_componentes
+	#]

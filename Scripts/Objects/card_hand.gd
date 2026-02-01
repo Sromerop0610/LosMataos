@@ -22,7 +22,7 @@ func robar_carta():
 	mano.clear()
 	for i in range(MANO_MAXIMA):
 		var carta := crear_carta_aleatoria()
-		carta.global_position.x = 280 + (200*i);
+		carta.global_position.x = 180 + (300*i);
 		carta.global_position.y= 450;
 	
 		mano.append(carta)

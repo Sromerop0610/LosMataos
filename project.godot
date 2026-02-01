@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 GlobalSignals="*uid://dmp1lompkbtkd"
 Inventario="*uid://sm4os5d6arwh"
 Puntos="*uid://b4w8ekud63yxw"
+Validator="*uid://b347gdq0x88ym"
 
 [display]
 
