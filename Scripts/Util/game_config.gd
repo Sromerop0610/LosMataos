@@ -9,7 +9,7 @@ const TIEMPO_TURNO: float = 60.0
 const FASES = [
 	{
 		"fase": 0,
-		"puntos_objetivo": 200,
+		"puntos_objetivo": 100,
 		"peso_afinacion": 0.45,
 		"peso_letra": 0.45,
 		"peso_libre": 0.10
