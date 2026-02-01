@@ -17,6 +17,7 @@ func _on_play_button_pressed():
 func _ready():
 	if OS.get_name() == "Web":
 		quit_button.hide()
+	Puntos.fase = 0
 
 func _on_volver_pressed():
 	creditos.hide()
