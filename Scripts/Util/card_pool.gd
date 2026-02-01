@@ -9,7 +9,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "basica1",
 		"title": "Letra pequeña",
-		"puntos_letras": 6,
+		"puntos_letras": 7,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
@@ -25,7 +25,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "basica3",
 		"title": "Letra perfecta",
-		"puntos_letras": 10,
+		"puntos_letras": 12,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
@@ -65,7 +65,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "media1",
 		"title": "Letra pequeña",
-		"puntos_letras": 20,
+		"puntos_letras": 15,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
@@ -73,7 +73,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "media2",
 		"title": "Letra estandar",
-		"puntos_letras": 25,
+		"puntos_letras": 24,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
@@ -121,7 +121,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "grande1",
 		"title": "Letra pequeña",
-		"puntos_letras": 40,
+		"puntos_letras": 35,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
@@ -129,7 +129,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "grande2",
 		"title": "Letra estandar",
-		"puntos_letras": 50,
+		"puntos_letras": 42,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
@@ -137,7 +137,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "grande3",
 		"title": "Letra perfecta",
-		"puntos_letras": 60,
+		"puntos_letras": 47,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
@@ -178,7 +178,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "gigante1",
 		"title": "Letra pequeña",
-		"puntos_letras": 60,
+		"puntos_letras": 65,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
@@ -186,7 +186,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "gigante2",
 		"title": "Letra estandar",
-		"puntos_letras": 65,
+		"puntos_letras": 70,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
@@ -194,7 +194,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "gigante3",
 		"title": "Letra perfecta",
-		"puntos_letras": 70,
+		"puntos_letras": 85,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
@@ -364,7 +364,17 @@ const CARTAS: Array[Dictionary] = [
 		"afinacion": 150,
 		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
+	},
+		{
+		"id": "especial_martinez",
+		"title": "Martinez Ares",
+		"puntos_letras": -100,
+		"componentes": 1,
+		"afinacion": 150,
+		"ruta_sprite": "res://icon.svg",
+		"fase": 4
 	}
+	
 ]
 
 # Filtra cartas por fase y devuelve una aleatoria
@@ -374,11 +384,6 @@ static func generar_carta_aleatoria(fase: int) -> Dictionary:
 	for carta in CARTAS:
 		if carta.get("fase", -1) == fase:
 			cartas_fase.append(carta)
-	
-	if cartas_fase.is_empty():
-		push_error("No hay cartas para la fase: " + str(fase))
-		return {}
-	
 	var indice_aleatorio := randi() % cartas_fase.size()
 	return cartas_fase[indice_aleatorio]
 

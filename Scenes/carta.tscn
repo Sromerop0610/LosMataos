@@ -1,6 +1,43 @@
 [gd_scene format=3 uid="uid://bcuhau6dr806v"]
 
+[ext_resource type="Texture2D" uid="uid://c8k83o3dcgvdx" path="res://icon.svg" id="1_5v8d1"]
 [ext_resource type="Script" uid="uid://djmc5cujmbcd2" path="res://Scripts/Objects/card.gd" id="1_yasdf"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5v8d1"]
+font_color = Color(0, 0, 0, 1)
+
 [node name="carta" type="Sprite2D" unique_id=620246183]
+z_index = 1
+texture = ExtResource("1_5v8d1")
 script = ExtResource("1_yasdf")
+
+[node name="Button" type="Button" parent="." unique_id=380362697]
+offset_left = -75.0
+offset_top = -73.0
+offset_right = 76.0
+offset_bottom = 76.0
+
+[node name="ColorTexto" type="ColorRect" parent="." unique_id=980949325]
+offset_left = -72.0
+offset_top = -160.0
+offset_right = 73.125
+offset_bottom = -79.0
+color = Color(1, 1, 0.44313726, 1)
+
+[node name="TextoInfo" type="Label" parent="." unique_id=1471788633]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -198.0
+offset_right = -8.5
+offset_bottom = -166.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_5v8d1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
