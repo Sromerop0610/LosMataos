@@ -42,6 +42,5 @@ func fetchear_info():
 
 
 func _on_button_pressed():
-	#print("Carta robada")
 	Inventario.llenarInventario(self)
 	GlobalSignals.cartaRobada.emit()

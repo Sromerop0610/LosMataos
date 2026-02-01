@@ -21,7 +21,8 @@ func robar_carta():
 	flush_mano()
 	mano.clear()
 	if !Puntos.fase >=4:
-		await get_tree().create_timer(0.5).timeout
+		if !(get_tree() == null):
+			await get_tree().create_timer(0.5).timeout
 	for i in range(MANO_MAXIMA):
 		var carta := crear_carta_aleatoria()
 		carta.global_position.x = 180 + (300*i);

@@ -36,7 +36,6 @@ func asignarRango():
 			return rangoE
 
 func resetPuntuaciones():
-	componentes = 0
-	letras = 0
-	afinacion = 0
+	Inventario.puntos_totales = 0
+	#Inventario.punt = 0
 	

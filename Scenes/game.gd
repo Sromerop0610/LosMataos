@@ -16,6 +16,11 @@ extends Node2D
 @onready var afinacion_label = $"Recuentos Puntuacion/AfinacionLabel"
 @onready var recuentos_puntuacion = $"Recuentos Puntuacion"
 
+@onready var componentes_label_2 = $PuntuacionNecesaria/ComponentesLabel2
+@onready var afinacion_label_2 = $PuntuacionNecesaria/AfinacionLabel2
+@onready var letra_label_2 = $PuntuacionNecesaria/LetraLabel2
+@onready var puntos_totales_label = $PuntuacionNecesaria/PuntosTotalesLabel
+
 func _ready():
 	tiempo_restante.max_value = tiempo_de_ronda.wait_time
 	GlobalSignals.StartingShow.connect(start_show)
@@ -23,6 +28,8 @@ func _ready():
 	GlobalSignals.GameWon.connect(pasar_de_ronda)
 	GlobalSignals.GameLost.connect(game_over)
 	mano.robar_carta()
+	actualizar_requisitos()
+	
 	
 func _process(_delta):
 	tiempo_restante.value = tiempo_de_ronda.time_left
@@ -51,7 +58,11 @@ func start_show():
 	letra_label.text += str(puntosRonda[2])
 	recuentos_puntuacion.show()
 	await get_tree().create_timer(5).timeout
+	if Inventario.puntos_totales<game_config.get_fase_config(Puntos.fase).get("puntos_objetivo"):
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 	recuentos_puntuacion.hide()
+	print("fase: " + str(Puntos.fase))
+	
 	pasar_de_ronda()
 	
 func _on_tiempo_de_ronda_timeout():
@@ -85,3 +96,17 @@ func pasar_de_ronda():
 
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+func actualizar_requisitos():
+	var dic = game_config.get_fase_config(Puntos.fase)
+	var puntos_totales = dic.get("puntos_objetivo")
+	print(dic)
+	componentes_label_2.text = "COMPONENTES:"
+	afinacion_label_2.text = "AFINACIÓN:"
+	letra_label_2.text = "LETRA:"
+	puntos_totales_label.text = "TOTALES:"
+	componentes_label_2.text += str(game_config.COMPONENTES_MINIMO) + "-"+ str(game_config.COMPONENTES_MAXIMO)
+	afinacion_label_2.text += str(int(dic.get("peso_afinacion")*100))
+	letra_label_2.text += str(int(dic.get("peso_letra")*100))
+	puntos_totales_label.text += str(puntos_totales)
+	

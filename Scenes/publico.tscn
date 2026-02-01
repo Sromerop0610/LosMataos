@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://wg5gilbtcw6p"]
+[gd_scene format=3 uid="uid://6hafcgojnaam"]
 
 [ext_resource type="Script" uid="uid://cg3jy3qywjql3" path="res://Scripts/publico.gd" id="1_mj2tj"]
 
@@ -8,7 +8,7 @@ puntuacionMala = 4
 puntuacionBuena = 5
 
 [node name="Timer" type="Timer" parent="." unique_id=1605457226]
-one_shot = true
+wait_time = 0.75
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

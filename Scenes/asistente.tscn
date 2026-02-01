@@ -1,11 +1,13 @@
-[gd_scene format=3 uid="uid://b48xmg3ypfdkd"]
+[gd_scene format=3 uid="uid://boyd5yn2cq1rj"]
 
-[ext_resource type="Texture2D" uid="uid://c8k83o3dcgvdx" path="res://icon.svg" id="1_kl1v0"]
+[ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="1_7va6s"]
 [ext_resource type="Script" uid="uid://bx7uwkv6dphw2" path="res://Scripts/asistente.gd" id="2_7va6s"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=1190394997]
-texture = ExtResource("1_kl1v0")
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("1_7va6s")
 script = ExtResource("2_7va6s")
+escala = 8.0
 
 [node name="Timer" type="Timer" parent="." unique_id=870189418]
 

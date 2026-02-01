@@ -11,5 +11,5 @@ func activar_salto():
 
 func _on_timer_timeout() -> void:
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "scale", Vector2(1,escala), salto).set_trans(Tween.TRANS_BOUNCE)
-	tween.tween_property(self, "scale", Vector2(1,1), caida).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(self, "scale", Vector2(7.5,escala), salto).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(self, "scale", Vector2(escala,7.5), caida).set_trans(Tween.TRANS_BOUNCE)
