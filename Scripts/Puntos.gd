@@ -18,7 +18,8 @@ func sumarPuntos():
 	
 func pasarNivel():
 	if sumarPuntos() >= puntosTotales:
-		print("Ehorabuena pasas de ronda")
+		pass
+		#print("Enhorabuena pasas de ronda")
 		
 func asignarRango():
 		if puntosTotales >= rangoS:

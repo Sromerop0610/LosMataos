@@ -17,10 +17,11 @@ func crear_carta_aleatoria() -> carta_base:
 	return carta
 
 func robar_carta():
-	print("robando cartas")
+	#print("robando cartas")
 	flush_mano()
 	mano.clear()
-	await get_tree().create_timer(0.5).timeout
+	if !Puntos.fase >=4:
+		await get_tree().create_timer(0.5).timeout
 	for i in range(MANO_MAXIMA):
 		var carta := crear_carta_aleatoria()
 		carta.global_position.x = 180 + (300*i);

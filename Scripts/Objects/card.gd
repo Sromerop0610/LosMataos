@@ -11,7 +11,7 @@ extends Sprite2D
 @onready var texto_info = $TextoInfo
 
 func _ready():
-	print(self)
+	#print(self)
 	fetchear_info()
 
 func crear_carta(data: Dictionary) -> void:
@@ -30,9 +30,9 @@ func disable_button():
 	button.disabled = true
 
 func fetchear_info():
-	print(componentes)
-	print(afinacion)
-	print(puntos_letras)
+	#print(componentes)
+	#print(afinacion)
+	#print(puntos_letras)
 	if (componentes!=0):
 		texto_info.text += "Componentes " + str(componentes) + "\n"
 	if (puntos_letras!=0):
@@ -42,6 +42,6 @@ func fetchear_info():
 
 
 func _on_button_pressed():
-	print("Carta robada")
+	#print("Carta robada")
 	Inventario.llenarInventario(self)
 	GlobalSignals.cartaRobada.emit()

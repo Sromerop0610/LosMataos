@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d1bkalsl4lcef"]
 
-[ext_resource type="Texture2D" uid="uid://cqb1h8ybgavwj" path="res://Assets/telon.png" id="1_gl6un"]
 [ext_resource type="Script" uid="uid://6qb7nbkuvahr" path="res://Scenes/game.gd" id="1_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cnnxibj1c4x5g" path="res://Assets/escenario.svg" id="2_2irst"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
-[ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
+[ext_resource type="Texture2D" uid="uid://c58axnjudyf7q" path="res://Assets/Telon.png" id="4_2irst"]
+[ext_resource type="Texture2D" uid="uid://b73kdcmfs5wpb" path="res://Assets/Sobre_telon.png" id="4_bf53h"]
 [ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
 [ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
 [ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
@@ -46,6 +46,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TelonEchado:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(482, 210)]
+}
 
 [sub_resource type="Animation" id="Animation_kldst"]
 resource_name = "hintTextMove"
@@ -74,10 +86,22 @@ tracks/0/path = NodePath("PreShow:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.13333344, 2.9666667),
+"times": PackedFloat32Array(0.13333344, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TelonEchado:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.100000024, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(482, -200), Vector2(482, 225)]
 }
 
 [sub_resource type="Animation" id="Animation_7lihs"]
@@ -94,6 +118,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TelonEchado:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(482, 210), Vector2(482, -200)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b2bpf"]
@@ -116,15 +152,22 @@ position = Vector2(478.5, 200)
 scale = Vector2(1.595, 1.2375)
 texture = ExtResource("2_2irst")
 
-[node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
-position = Vector2(481.5, 125.99998)
-scale = Vector2(14.953125, 5.7916665)
-texture = ExtResource("3_kldst")
-
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-position = Vector2(478.99997, 201.00002)
-scale = Vector2(10.031251, 4.21875)
-texture = ExtResource("1_gl6un")
+position = Vector2(482, 210)
+scale = Vector2(7.5, 6.1666665)
+texture = ExtResource("4_2irst")
+
+[node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
+position = Vector2(479.50003, 254)
+scale = Vector2(7.4609385, 7.104167)
+texture = ExtResource("4_bf53h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=783026978]
+offset_left = -3.0
+offset_top = 397.0
+offset_right = 962.0
+offset_bottom = 544.0
+color = Color(0.37290916, 0.28182733, 0.14948955, 1)
 
 [node name="PreShow" type="Control" parent="." unique_id=1525962351]
 layout_mode = 3
@@ -144,7 +187,7 @@ anchor_bottom = 1.0
 offset_left = -481.5
 offset_top = -137.0
 offset_right = 480.5
-offset_bottom = 7.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 0.8666667)
@@ -495,9 +538,9 @@ grow_vertical = 2
 [node name="ComponentesLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1412751170]
 layout_mode = 0
 offset_left = 106.0
-offset_top = 81.0
-offset_right = 356.0
-offset_bottom = 222.0
+offset_top = 51.0
+offset_right = 546.0
+offset_bottom = 192.0
 text = "COMPONENTES:"
 label_settings = SubResource("LabelSettings_2irst")
 vertical_alignment = 1
@@ -505,20 +548,19 @@ vertical_alignment = 1
 [node name="AfinacionLabel" type="Label" parent="Recuentos Puntuacion" unique_id=54236078]
 layout_mode = 0
 offset_left = 106.0
-offset_top = 149.0
-offset_right = 347.0
-offset_bottom = 290.0
-text = "AFINACIÓN:
-"
+offset_top = 126.0
+offset_right = 469.0
+offset_bottom = 267.0
+text = "AFINACIÓN:"
 label_settings = SubResource("LabelSettings_2irst")
 vertical_alignment = 1
 
 [node name="LetraLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1540186337]
 layout_mode = 0
 offset_left = 106.0
-offset_top = 176.0
-offset_right = 347.0
-offset_bottom = 317.0
+offset_top = 199.0
+offset_right = 616.0
+offset_bottom = 340.0
 text = "LETRA:"
 label_settings = SubResource("LabelSettings_2irst")
 vertical_alignment = 1

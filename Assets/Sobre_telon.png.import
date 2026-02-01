@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c58axnjudyf7q"
-path="res://.godot/imported/Telon.png-2bb64e109835a5b847242758c951727b.ctex"
+uid="uid://b73kdcmfs5wpb"
+path="res://.godot/imported/Sobre_telon.png-a45a498d2a6d1ace09e27dcaf8446fb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Telon.png"
-dest_files=["res://.godot/imported/Telon.png-2bb64e109835a5b847242758c951727b.ctex"]
+source_file="res://Assets/Sobre_telon.png"
+dest_files=["res://.godot/imported/Sobre_telon.png-a45a498d2a6d1ace09e27dcaf8446fb1.ctex"]
 
 [params]
 

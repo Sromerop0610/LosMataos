@@ -266,7 +266,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 50,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -275,7 +275,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 55,
 		"componentes": 1,
 		"afinacion": -15,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -284,7 +284,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 60,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	
@@ -296,7 +296,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 30,
 		"componentes": -1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -305,7 +305,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 0,
 		"componentes": -1,
 		"afinacion": 30,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -314,7 +314,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 15,
 		"componentes": -1,
 		"afinacion": 15,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},	
 	{
@@ -323,7 +323,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -10,
 		"componentes": -1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 
@@ -335,7 +335,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 90,
 		"componentes": 2,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -344,7 +344,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 120,
 		"componentes": 2,
 		"afinacion": 90,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3,
 	},
 	{
@@ -353,7 +353,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 150,
 		"componentes": 1,
 		"afinacion": -100,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -362,7 +362,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -100,
 		"componentes": 1,
 		"afinacion": 150,
-		"ruta_sprite": "res://icon.svg", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
 		"fase": 3
 	},
 		{
@@ -371,7 +371,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -100,
 		"componentes": 1,
 		"afinacion": 150,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
 		"fase": 4
 	}
 	

@@ -98,6 +98,7 @@ static func resumen_inventario() -> Array:
 		total_letra += carta.get("puntos_letras")
 		total_afinacion += carta.get("afinacion")
 		total_componentes += carta.get("componentes")
+
 	return pointsArray
 
 	#

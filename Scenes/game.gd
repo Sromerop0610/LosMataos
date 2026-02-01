@@ -37,12 +37,15 @@ func _on_button_ayuda_pressed():
 	tiempo_de_ronda.paused = true
 
 func start_show():
+	componentes_label.text = "COMPONENTES: "
+	afinacion_label.text = "AFINACIÓN: "
+	letra_label.text = "LETRAS: "
 	mano.hide()
 	animation_player.play("show_start")
 	await animation_player.animation_finished
-	telon_echado.hide()
+	#telon_echado.hide()
 	await get_tree().create_timer(1).timeout
-	var puntosRonda = Validator.resumen_inventario()
+	var puntosRonda = Inventario.sumarPuntosInventario()
 	componentes_label.text += str(puntosRonda[0])
 	afinacion_label.text += str(puntosRonda[1])
 	letra_label.text += str(puntosRonda[2])
@@ -67,17 +70,18 @@ func pasar_de_ronda():
 	Puntos.fase +=1
 	if Puntos.fase>=4:
 		get_tree().change_scene_to_file("res://Scenes/pantalla_victoria.tscn")
-	print("pasando de ronda")
+	#print("pasando de ronda")
 	Puntos.resetPuntuaciones()
 	GlobalSignals.cartaRobada.emit()
+	#telon_echado.show()
 	animation_player.play("round_start")
-	#await animation_player.animation_finished
+	await animation_player.animation_finished
 	mano.show()
 	tiempo_restante.show()
 	button_a_cantar.show()
 	button_ayuda.show()
 	tiempo_de_ronda.start()
-	print(Puntos.fase)
+	#print(Puntos.fase)
 
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
