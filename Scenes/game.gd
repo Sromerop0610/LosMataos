@@ -34,11 +34,10 @@ func _on_button_ayuda_pressed():
 
 func start_show():
 	mano.hide()
-	#GlobalSignals.StartingShow.emit()
 	animation_player.play("show_start")
-	#await animation_player.animation_finished
+	await animation_player.animation_finished
 	telon_echado.hide()
-	#await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(10).timeout
 	pasar_de_ronda()
 	
 func _on_tiempo_de_ronda_timeout():
