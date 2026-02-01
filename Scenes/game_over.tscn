@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ci1byty0e7au7"]
 
 [ext_resource type="Script" uid="uid://bx11fr1bep8uk" path="res://Scenes/game_over.gd" id="1_ojehl"]
+[ext_resource type="Texture2D" uid="uid://c58axnjudyf7q" path="res://Assets/telon.png" id="2_8fo1c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i2yjh"]
 font_size = 64
@@ -13,6 +14,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ojehl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1510854841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8fo1c")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1919492505]
 layout_mode = 1
