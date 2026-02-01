@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
 [ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
 [ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
-[ext_resource type="PackedScene" uid="uid://6hafcgojnaam" path="res://Scenes/publico.tscn" id="7_bf53h"]
+[ext_resource type="PackedScene" path="res://Scenes/publico.tscn" id="7_bf53h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kldst"]
 font_size = 50
