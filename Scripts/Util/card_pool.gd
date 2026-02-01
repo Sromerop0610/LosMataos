@@ -266,7 +266,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 50,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Rojo-negro.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -275,7 +275,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 55,
 		"componentes": 1,
 		"afinacion": -15,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Rojo-rosa.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -284,7 +284,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 60,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Blanca-grisacea.png", # <- TERMINAR
 		"fase": 3
 	},
 	
@@ -296,7 +296,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 30,
 		"componentes": -1,
 		"afinacion": 0,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Verde.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -305,7 +305,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 0,
 		"componentes": -1,
 		"afinacion": 30,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Rosa-verde.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -314,7 +314,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 15,
 		"componentes": -1,
 		"afinacion": 15,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBasica_Rojo-rosa.png", # <- TERMINAR
 		"fase": 3
 	},	
 	{
@@ -323,7 +323,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -10,
 		"componentes": -1,
 		"afinacion": -10,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_Mascara-morado-azul).png", # <- TERMINAR
 		"fase": 3
 	},
 
@@ -335,7 +335,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 90,
 		"componentes": 2,
 		"afinacion": 0,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraJulioPardo.png", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -344,7 +344,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 120,
 		"componentes": 2,
 		"afinacion": 90,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraBienvenido.png", # <- TERMINAR
 		"fase": 3,
 	},
 	{
@@ -362,7 +362,16 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -100,
 		"componentes": 1,
 		"afinacion": 150,
-		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png", # <- TERMINAR
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraAres.png", # <- TERMINAR
+		"fase": 3
+	},
+	{
+		"id": "especial_martinez",
+		"title": "Marta Diaz",
+		"puntos_letras": 75,
+		"componentes": 2,
+		"afinacion": 75,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMarta.png", # <- TERMINAR
 		"fase": 3
 	},
 		{
