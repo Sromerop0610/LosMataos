@@ -2,184 +2,161 @@
 
 [ext_resource type="Texture2D" uid="uid://cqb1h8ybgavwj" path="res://Assets/telon.png" id="1_gl6un"]
 [ext_resource type="Script" uid="uid://6qb7nbkuvahr" path="res://Scenes/game.gd" id="1_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://cnnxibj1c4x5g" path="res://Assets/escenario.svg" id="2_2irst"]
 [ext_resource type="Texture2D" uid="uid://ddjp5ykka8ryo" path="res://Assets/person.png" id="2_j5yw3"]
 [ext_resource type="Texture2D" uid="uid://cmd6e8x1yhyi0" path="res://Assets/telonRecogido.png" id="3_kldst"]
+[ext_resource type="Script" uid="uid://3yncn7ytnmga" path="res://Scripts/Objects/card_hand.gd" id="5_2irst"]
+[ext_resource type="AudioStream" uid="uid://b7ddm8lq6mlup" path="res://Assets/Choniketes.mp3" id="5_7lihs"]
+[ext_resource type="AudioStream" uid="uid://kp4v0dx5hkui" path="res://Assets/LaCarniceria.mp3" id="6_fgofq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kldst"]
 font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
+font_size = 76
 
 [sub_resource type="LabelSettings" id="LabelSettings_j5yw3"]
 font_size = 64
 
 [sub_resource type="LabelSettings" id="LabelSettings_b2bpf"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
-font_size = 76
+[sub_resource type="Animation" id="Animation_b2bpf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow/HelpLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(321, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PreShow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kldst"]
+resource_name = "hintTextMove"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow/HelpLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9666667, 3.9333334),
+"transitions": PackedFloat32Array(1.1486989, 1.1486989, 1.1486989),
+"update": 0,
+"values": [Vector2(321, 70), Vector2(321, 100), Vector2(321, 70)]
+}
+
+[sub_resource type="Animation" id="Animation_2irst"]
+resource_name = "round_start"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333344, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7lihs"]
+resource_name = "show_start"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PreShow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2bpf"]
+_data = {
+&"RESET": SubResource("Animation_b2bpf"),
+&"hintTextMove": SubResource("Animation_kldst"),
+&"round_start": SubResource("Animation_2irst"),
+&"show_start": SubResource("Animation_7lihs")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_2irst"]
+font_size = 32
 
 [node name="Game" type="Node2D" unique_id=1685926891]
 script = ExtResource("1_j5yw3")
 
-[node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
-position = Vector2(575, 216.5)
-scale = Vector2(11.979167, 4.4895835)
-texture = ExtResource("1_gl6un")
+[node name="Escenario" type="Sprite2D" parent="." unique_id=1783653983]
+modulate = Color(0.6847319, 0.6847319, 0.6847319, 1)
+position = Vector2(478.5, 200)
+scale = Vector2(1.595, 1.2375)
+texture = ExtResource("2_2irst")
 
 [node name="TelonAbierto" type="Sprite2D" parent="." unique_id=2134543674]
-visible = false
-position = Vector2(572.99994, 134.5)
-scale = Vector2(17.812498, 6.197917)
+position = Vector2(481.5, 125.99998)
+scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
-[node name="Publico" type="Node2D" parent="." unique_id=1375024485]
-position = Vector2(0, -19)
+[node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
+position = Vector2(478.99997, 201.00002)
+scale = Vector2(10.031251, 4.21875)
+texture = ExtResource("1_gl6un")
 
-[node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
-position = Vector2(45, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="PreShow" type="Control" parent="." unique_id=1525962351]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 963.0
+offset_bottom = 529.0
 
-[node name="Person2" type="Sprite2D" parent="Publico" unique_id=1212556167]
-position = Vector2(135, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="ColorRect" type="ColorRect" parent="PreShow" unique_id=695855773]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -481.5
+offset_top = -137.0
+offset_right = 480.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.8666667)
 
-[node name="Person3" type="Sprite2D" parent="Publico" unique_id=1102785926]
-position = Vector2(220, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
+[node name="ButtonAyuda" type="Button" parent="PreShow" unique_id=1999960461]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 26.0
+offset_right = 932.0
+offset_bottom = 101.0
 
-[node name="Person4" type="Sprite2D" parent="Publico" unique_id=597539734]
-position = Vector2(301, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person5" type="Sprite2D" parent="Publico" unique_id=1905797537]
-position = Vector2(381, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person6" type="Sprite2D" parent="Publico" unique_id=1739119696]
-position = Vector2(459, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person7" type="Sprite2D" parent="Publico" unique_id=1022270183]
-position = Vector2(536, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person8" type="Sprite2D" parent="Publico" unique_id=495151412]
-position = Vector2(614, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person9" type="Sprite2D" parent="Publico" unique_id=109118406]
-position = Vector2(691, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person10" type="Sprite2D" parent="Publico" unique_id=173279940]
-position = Vector2(768.99994, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person11" type="Sprite2D" parent="Publico" unique_id=747764155]
-position = Vector2(849, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person12" type="Sprite2D" parent="Publico" unique_id=1672697550]
-position = Vector2(930, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person13" type="Sprite2D" parent="Publico" unique_id=1870051931]
-position = Vector2(1013.00006, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person14" type="Sprite2D" parent="Publico" unique_id=1180901286]
-position = Vector2(1101, 600.85315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person15" type="Sprite2D" parent="Publico" unique_id=1622111385]
-position = Vector2(45, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person16" type="Sprite2D" parent="Publico" unique_id=263153196]
-position = Vector2(135, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person17" type="Sprite2D" parent="Publico" unique_id=1682583271]
-position = Vector2(220, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person18" type="Sprite2D" parent="Publico" unique_id=369559655]
-position = Vector2(301, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person19" type="Sprite2D" parent="Publico" unique_id=4460864]
-position = Vector2(381, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person20" type="Sprite2D" parent="Publico" unique_id=121272798]
-position = Vector2(459, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person21" type="Sprite2D" parent="Publico" unique_id=723106344]
-position = Vector2(536, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person22" type="Sprite2D" parent="Publico" unique_id=1705769285]
-position = Vector2(614, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person23" type="Sprite2D" parent="Publico" unique_id=1008854670]
-position = Vector2(691, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person24" type="Sprite2D" parent="Publico" unique_id=576327337]
-position = Vector2(768.99994, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person25" type="Sprite2D" parent="Publico" unique_id=2018503949]
-position = Vector2(849, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person26" type="Sprite2D" parent="Publico" unique_id=151739805]
-position = Vector2(930, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person27" type="Sprite2D" parent="Publico" unique_id=2138932564]
-position = Vector2(1013.00006, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="Person28" type="Sprite2D" parent="Publico" unique_id=1578635429]
-position = Vector2(1101, 496.60315)
-scale = Vector2(0.2359375, 0.23593752)
-texture = ExtResource("2_j5yw3")
-
-[node name="ButtonAyuda" type="Button" parent="." unique_id=1999960461]
-offset_left = 1070.0
-offset_top = 12.0
-offset_right = 1140.0
-offset_bottom = 87.0
-
-[node name="Label" type="Label" parent="ButtonAyuda" unique_id=1565324698]
+[node name="Label" type="Label" parent="PreShow/ButtonAyuda" unique_id=1565324698]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -197,6 +174,219 @@ label_settings = SubResource("LabelSettings_kldst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="mano" type="Node2D" parent="PreShow" unique_id=1436745308]
+position = Vector2(2, -1)
+script = ExtResource("5_2irst")
+
+[node name="TiempoRestante" type="ProgressBar" parent="PreShow" unique_id=286496479]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -498.5
+offset_top = -23.5
+offset_right = 444.5
+offset_bottom = 3.5
+grow_horizontal = 2
+show_percentage = false
+
+[node name="SegundosLabel" type="Label" parent="PreShow/TiempoRestante" unique_id=1239767035]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -422.5
+offset_top = 54.5
+offset_right = -379.5
+offset_bottom = 159.5
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_7lihs")
+
+[node name="ButtonACantar" type="Button" parent="PreShow" unique_id=1424554422]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 355.5
+offset_top = -148.0
+offset_right = 437.5
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4333234, 1.4333234)
+text = "¡A cantar!"
+
+[node name="HelpLabel" type="Label" parent="PreShow" unique_id=1366538110]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -211.0
+offset_right = 169.5
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1861482, 1.1861482)
+text = "¡Escoge cartas para mejorar tu agrupación!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Publico" type="Node2D" parent="." unique_id=1375024485]
+position = Vector2(454, 464.99997)
+scale = Vector2(0.826654, 0.69795346)
+
+[node name="Person" type="Sprite2D" parent="Publico" unique_id=1867308609]
+position = Vector2(-494.51624, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person2" type="Sprite2D" parent="Publico" unique_id=1212556167]
+position = Vector2(-404.51624, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person3" type="Sprite2D" parent="Publico" unique_id=1102785926]
+position = Vector2(-319.51624, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person4" type="Sprite2D" parent="Publico" unique_id=597539734]
+position = Vector2(-238.51624, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person5" type="Sprite2D" parent="Publico" unique_id=1905797537]
+position = Vector2(-158.51624, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person6" type="Sprite2D" parent="Publico" unique_id=1739119696]
+position = Vector2(-80.516235, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person7" type="Sprite2D" parent="Publico" unique_id=1022270183]
+position = Vector2(-3.5162354, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person8" type="Sprite2D" parent="Publico" unique_id=495151412]
+position = Vector2(74.483765, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person9" type="Sprite2D" parent="Publico" unique_id=109118406]
+position = Vector2(151.48376, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person10" type="Sprite2D" parent="Publico" unique_id=173279940]
+position = Vector2(229.4837, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person11" type="Sprite2D" parent="Publico" unique_id=747764155]
+position = Vector2(309.48376, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person12" type="Sprite2D" parent="Publico" unique_id=1672697550]
+position = Vector2(390.48376, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person13" type="Sprite2D" parent="Publico" unique_id=1870051931]
+position = Vector2(473.48383, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person14" type="Sprite2D" parent="Publico" unique_id=1180901286]
+position = Vector2(561.48376, 57.575848)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person15" type="Sprite2D" parent="Publico" unique_id=1622111385]
+position = Vector2(-494.51624, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person16" type="Sprite2D" parent="Publico" unique_id=263153196]
+position = Vector2(-404.51624, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person17" type="Sprite2D" parent="Publico" unique_id=1682583271]
+position = Vector2(-319.51624, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person18" type="Sprite2D" parent="Publico" unique_id=369559655]
+position = Vector2(-238.51624, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person19" type="Sprite2D" parent="Publico" unique_id=4460864]
+position = Vector2(-158.51624, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person20" type="Sprite2D" parent="Publico" unique_id=121272798]
+position = Vector2(-80.516235, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person21" type="Sprite2D" parent="Publico" unique_id=723106344]
+position = Vector2(-3.5162354, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person22" type="Sprite2D" parent="Publico" unique_id=1705769285]
+position = Vector2(74.483765, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person23" type="Sprite2D" parent="Publico" unique_id=1008854670]
+position = Vector2(151.48376, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person24" type="Sprite2D" parent="Publico" unique_id=576327337]
+position = Vector2(229.4837, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person25" type="Sprite2D" parent="Publico" unique_id=2018503949]
+position = Vector2(309.48376, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person26" type="Sprite2D" parent="Publico" unique_id=151739805]
+position = Vector2(390.48376, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person27" type="Sprite2D" parent="Publico" unique_id=2138932564]
+position = Vector2(473.48383, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="Person28" type="Sprite2D" parent="Publico" unique_id=1578635429]
+position = Vector2(561.48376, -46.674152)
+scale = Vector2(4.591, 5.326)
+texture = ExtResource("2_j5yw3")
+
+[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
 [node name="HelpLayer" type="Control" parent="." unique_id=742079439]
 visible = false
 layout_mode = 3
@@ -210,6 +400,7 @@ offset_right = 1153.0
 offset_bottom = 646.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8388487, 0.8388487)
 
 [node name="ColorRect" type="ColorRect" parent="HelpLayer" unique_id=781198762]
 layout_mode = 1
@@ -240,20 +431,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -570.5394
+offset_top = -115.5
+offset_right = 569.1178
+offset_bottom = 115.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Tu objetivo es pasar de ronda, acumulando todos los puntos posibles.
+text = "Falla al Fallo
+          Instrucciones básicas del juego
 
-Tienes 3 cartas en la parte inferior de la pantalla, de las que puedes escoger una, y así varias veces.
+El juego se desarrolla en cuatro niveles distintos, cada uno más difícil que el anterior.
+Tu objetivo en cada nivel es tener un número entre dos en la categoría de Componentes y también llegar a la puntuación requerida que se pedirá en cada nivel (Los puntos se sumarán mediante la barra de Letra y Afinación). Todo esto dentro del tiempo límite que se imponga.
 
-Cuando se acabe el tiempo (o le des al botón \"A cantar!\") el juzgado y el público te evaluará."
+Nota importante: Este juego es mental, lo que significa que en ningún momento podrás ver cuantos puntos llevas, así qué tendrás que pañartelas como puedas para ganar."
 label_settings = SubResource("LabelSettings_b2bpf")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="ButtonEntendido" type="Button" parent="HelpLayer" unique_id=733797044]
 layout_mode = 1
@@ -270,44 +464,64 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Entendido"
 
-[node name="TiempoDeRonda" type="Timer" parent="." unique_id=1223557745]
-wait_time = 30.0
-one_shot = true
-autostart = true
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2031352524]
+libraries/ = SubResource("AnimationLibrary_b2bpf")
 
-[node name="TiempoRestante" type="ProgressBar" parent="." unique_id=286496479]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 5
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1207672741]
+stream = ExtResource("5_7lihs")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1125367659]
+stream = ExtResource("6_fgofq")
+parameters/looping = true
+
+[node name="Recuentos Puntuacion" type="Control" parent="." unique_id=647169497]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = 3.0
-offset_top = 180.0
-offset_right = 1147.0
-offset_bottom = 207.0
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 46.0
+offset_right = 991.0
+offset_bottom = 432.0
 grow_horizontal = 2
-show_percentage = false
+grow_vertical = 2
 
-[node name="SegundosLabel" type="Label" parent="TiempoRestante" unique_id=1239767035]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -36.5
-offset_top = -110.0
-offset_right = 36.5
-offset_bottom = 65.0
-grow_horizontal = 2
-text = "0"
-label_settings = SubResource("LabelSettings_7lihs")
+[node name="ComponentesLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1412751170]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 81.0
+offset_right = 356.0
+offset_bottom = 222.0
+text = "COMPONENTES:"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
 
-[node name="ButtonACantar" type="Button" parent="." unique_id=1424554422]
-offset_left = 520.0
-offset_top = 244.0
-offset_right = 602.0
-offset_bottom = 275.0
-text = "¡A cantar!"
+[node name="AfinacionLabel" type="Label" parent="Recuentos Puntuacion" unique_id=54236078]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 149.0
+offset_right = 347.0
+offset_bottom = 290.0
+text = "AFINACIÓN:
+"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
 
-[connection signal="pressed" from="ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
-[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]
+[node name="LetraLabel" type="Label" parent="Recuentos Puntuacion" unique_id=1540186337]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 176.0
+offset_right = 347.0
+offset_bottom = 317.0
+text = "LETRA:"
+label_settings = SubResource("LabelSettings_2irst")
+vertical_alignment = 1
+
+[connection signal="pressed" from="PreShow/ButtonAyuda" to="." method="_on_button_ayuda_pressed"]
+[connection signal="pressed" from="PreShow/ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
 [connection signal="timeout" from="TiempoDeRonda" to="." method="_on_tiempo_de_ronda_timeout"]
-[connection signal="pressed" from="ButtonACantar" to="." method="_on_button_a_cantar_pressed"]
+[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_button_entendido_pressed"]

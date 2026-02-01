@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://ba5ur5jcnmyie"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j5yw3"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_b2bpf"]
+
+[node name="HelpLayer" type="Control" unique_id=1188589777]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -279.0
+offset_right = 663.0
+offset_bottom = 369.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8388487, 0.8388487)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1556904544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.37254903)
+
+[node name="Label" type="Label" parent="." unique_id=1250318797]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_top = 48.0
+offset_right = 178.5
+offset_bottom = 136.0
+grow_horizontal = 2
+text = "Cómo Jugar"
+label_settings = SubResource("LabelSettings_j5yw3")
+
+[node name="Label2" type="Label" parent="." unique_id=1337354275]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.65942
+offset_top = -149.95192
+offset_right = 310.42993
+offset_bottom = 211.0481
+grow_horizontal = 2
+grow_vertical = 2
+text = "Falla al Fallo
+          Instrucciones básicas del juego
+
+El juego se desarrolla en cuatro niveles distintos, cada uno más difícil que el anterior.
+Tu objetivo en cada nivel es tener un número entre dos en la categoría de Componentes y también llegar a la puntuación requerida que se pedirá en cada nivel (Los puntos se sumarán mediante la barra de Letra y Afinación). Todo esto dentro del tiempo límite que se imponga.
+
+Nota importante: Este juego es mental, lo que significa que en ningún momento podrás ver cuantos puntos llevas, así qué tendrás que pañartelas como puedas para ganar."
+label_settings = SubResource("LabelSettings_b2bpf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="ButtonEntendido" type="Button" parent="." unique_id=1402461302]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -88.0
+offset_right = 43.5
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Entendido"

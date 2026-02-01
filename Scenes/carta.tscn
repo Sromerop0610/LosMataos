@@ -1,6 +1,56 @@
 [gd_scene format=3 uid="uid://bcuhau6dr806v"]
 
-[ext_resource type="Script" path="res://Scripts/Objects/_carta.gd" id="1_yasdf"]
+[ext_resource type="Texture2D" uid="uid://sxyyswq5h1cx" path="res://Assets/Mascaras/Sprite_MascaraMejor1.png" id="1_5v8d1"]
+[ext_resource type="Script" uid="uid://djmc5cujmbcd2" path="res://Scripts/Objects/card.gd" id="1_yasdf"]
 
-[node name="carta" type="Node2D" unique_id=741360457]
+[sub_resource type="LabelSettings" id="LabelSettings_5v8d1"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="carta" type="Sprite2D" unique_id=851345969]
+z_index = 1
+scale = Vector2(4.763106, 4.763106)
+texture = ExtResource("1_5v8d1")
 script = ExtResource("1_yasdf")
+
+[node name="ColorTexto" type="ColorRect" parent="." unique_id=980949325]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.613533
+offset_top = -84.27681
+offset_right = 87.51147
+offset_bottom = -3.2768135
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3599802, 0.3599802)
+color = Color(1, 1, 0.44313726, 1)
+
+[node name="TextoInfo" type="Label" parent="." unique_id=1471788633]
+anchors_preset = -1
+anchor_left = 0.94900006
+anchor_top = 0.060000002
+anchor_right = 0.94900006
+anchor_bottom = 0.060000002
+offset_left = -55.697273
+offset_top = -41.840416
+offset_right = -42.564262
+offset_bottom = -18.840416
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6434006, 0.6434006)
+label_settings = SubResource("LabelSettings_5v8d1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=380362697]
+modulate = Color(1, 1, 1, 0.57254905)
+offset_left = -25.61354
+offset_top = -52.276814
+offset_right = 116.56563
+offset_bottom = 164.70343
+scale = Vector2(0.3676827, 0.3676827)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
