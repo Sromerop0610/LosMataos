@@ -9,7 +9,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "basica1",
 		"title": "Letra pequeña",
-		"puntos_letras": 6,
+		"puntos_letras": 7,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -25,7 +25,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "basica3",
 		"title": "Letra perfecta",
-		"puntos_letras": 10,
+		"puntos_letras": 12,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -38,7 +38,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 6,
+		"afinacion": 7,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 0
 	},	{
@@ -54,7 +54,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 10,
+		"afinacion": 12,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 0
 	},
@@ -65,7 +65,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "media1",
 		"title": "Letra pequeña",
-		"puntos_letras": 20,
+		"puntos_letras": 15,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -73,7 +73,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "media2",
 		"title": "Letra estandar",
-		"puntos_letras": 25,
+		"puntos_letras": 24,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -94,7 +94,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 20,
+		"afinacion": 15,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 1
 	},	{
@@ -102,7 +102,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 25,
+		"afinacion": 24,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 1
 	},	{
@@ -121,7 +121,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "grande1",
 		"title": "Letra pequeña",
-		"puntos_letras": 40,
+		"puntos_letras": 35,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -129,7 +129,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "grande2",
 		"title": "Letra estandar",
-		"puntos_letras": 50,
+		"puntos_letras": 42,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -137,7 +137,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "grande3",
 		"title": "Letra perfecta",
-		"puntos_letras": 60,
+		"puntos_letras": 47,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -147,7 +147,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 40,
+		"afinacion": 35,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 2
 	},	{
@@ -155,7 +155,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 50,
+		"afinacion": 42,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 2
 	},	{
@@ -163,7 +163,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 60,
+		"afinacion": 47,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 2
 	},
@@ -174,7 +174,7 @@ const CARTAS: Array[Dictionary] = [
 	{
 		"id": "gigante1",
 		"title": "Letra pequeña",
-		"puntos_letras": 60,
+		"puntos_letras": 65,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -182,7 +182,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "gigante2",
 		"title": "Letra estandar",
-		"puntos_letras": 65,
+		"puntos_letras": 70,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -190,7 +190,7 @@ const CARTAS: Array[Dictionary] = [
 	},	{
 		"id": "gigante3",
 		"title": "Letra perfecta",
-		"puntos_letras": 70,
+		"puntos_letras": 85,
 		"componentes": 1,
 		"afinacion": 0,
 		"ruta_sprite": "res://icon.svg",
@@ -202,7 +202,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 60,
+		"afinacion": 65,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 3
 	},	{
@@ -210,7 +210,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 65,
+		"afinacion": 75,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 3
 	},	{
@@ -218,7 +218,7 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 70,
+		"afinacion": 85,
 		"ruta_sprite": "res://icon.svg",
 		"fase": 3
 	}, 
