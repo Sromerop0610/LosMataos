@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cs8ng15wu6v6e"]
 
 [ext_resource type="Script" uid="uid://ctrn6o82pqwm4" path="res://Scripts/menú_principal.gd" id="1_tf4ic"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_csqe3"]
-font_size = 64
+[ext_resource type="Texture2D" uid="uid://bqggdpbv6k7b4" path="res://Assets/Teatro_Falla.png" id="2_xcfe6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xcfe6"]
 font_size = 18
@@ -16,6 +14,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -12.0
+offset_right = -12.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tf4ic")
@@ -34,29 +34,6 @@ offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="BotonesMenu" unique_id=500840459]
-layout_mode = 2
-text = "FALLA AL FALLO"
-label_settings = SubResource("LabelSettings_csqe3")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PlayButton" type="Button" parent="BotonesMenu" unique_id=1627495329]
-layout_mode = 2
-text = "Jugar"
-
-[node name="OptionsButton" type="Button" parent="BotonesMenu" unique_id=1015501448]
-layout_mode = 2
-text = "Cómo Jugar"
-
-[node name="QuitButton" type="Button" parent="BotonesMenu" unique_id=1864546777]
-layout_mode = 2
-text = "Salir"
-
-[node name="CreditosButton" type="Button" parent="BotonesMenu" unique_id=1018915566]
-layout_mode = 2
-text = "Créditos"
 
 [node name="Creditos" type="Control" parent="." unique_id=1625181191]
 visible = false
@@ -124,7 +101,59 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Volver al menú"
 
-[connection signal="pressed" from="BotonesMenu/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="BotonesMenu/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="BotonesMenu/CreditosButton" to="." method="_on_creditos_button_pressed"]
+[node name="PlayButton" type="Button" parent="." unique_id=1627495329]
+z_index = 1
+layout_mode = 0
+offset_left = 447.0
+offset_top = 436.0
+offset_right = 538.0
+offset_bottom = 510.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Jugar"
+
+[node name="OptionsButton" type="Button" parent="." unique_id=1015501448]
+z_index = 1
+layout_mode = 0
+offset_left = 808.0
+offset_top = 472.0
+offset_right = 939.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Cómo Jugar"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1864546777]
+z_index = 1
+layout_mode = 0
+offset_left = 327.0
+offset_top = 435.0
+offset_right = 417.0
+offset_bottom = 510.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Salir"
+
+[node name="CreditosButton" type="Button" parent="." unique_id=1018915566]
+z_index = 1
+layout_mode = 0
+offset_left = 565.0
+offset_top = 436.0
+offset_right = 662.0
+offset_bottom = 510.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Créditos"
+
+[node name="TeatroFalla" type="Sprite2D" parent="." unique_id=2032541287]
+position = Vector2(492.5, 270)
+scale = Vector2(7.5078125, 7.5)
+texture = ExtResource("2_xcfe6")
+
 [connection signal="pressed" from="Creditos/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CreditosButton" to="." method="_on_creditos_button_pressed"]
