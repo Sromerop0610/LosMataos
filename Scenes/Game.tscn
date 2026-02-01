@@ -440,10 +440,11 @@ grow_vertical = 2
 text = "Falla al Fallo
           Instrucciones básicas del juego
 
-El juego se desarrolla en cuatro niveles distintos, cada uno más difícil que el anterior.
-Tu objetivo en cada nivel es tener un número entre dos en la categoría de Componentes y también llegar a la puntuación requerida que se pedirá en cada nivel (Los puntos se sumarán mediante la barra de Letra y Afinación). Todo esto dentro del tiempo límite que se imponga.
+Necesitas llegar a una cantidad de puntos que se especificará en la esquina superior izquierda de la pantalla, pero tienes que tener en cuenta que la barra de \"Componentes\" necesitas estar en un rango entre números para pasar al siguiente nivel (Las otras dos barras se encargan de hacer medias con sus respectivos puntuajes).
 
-Nota importante: Este juego es mental, lo que significa que en ningún momento podrás ver cuantos puntos llevas, así qué tendrás que pañartelas como puedas para ganar."
+Debajo de la pantalla se muestran tres máscaras, algunas suman otras restan... Tendrás que ir jugando mediante estas máscaras para ganar.
+
+Esto es un juego para pensar, por lo que los porcentajes de cada barra no se muestran en ningún momento, así que tendrás que ayudarte de tu propio ingenio para saber en todo momento cuales son tus puntuaciones."
 label_settings = SubResource("LabelSettings_b2bpf")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -477,6 +478,7 @@ stream = ExtResource("6_fgofq")
 parameters/looping = true
 
 [node name="Recuentos Puntuacion" type="Control" parent="." unique_id=647169497]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

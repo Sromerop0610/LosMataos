@@ -14,6 +14,7 @@ extends Node2D
 @onready var componentes_label = $"Recuentos Puntuacion/ComponentesLabel"
 @onready var letra_label = $"Recuentos Puntuacion/LetraLabel"
 @onready var afinacion_label = $"Recuentos Puntuacion/AfinacionLabel"
+@onready var recuentos_puntuacion = $"Recuentos Puntuacion"
 
 func _ready():
 	tiempo_restante.max_value = tiempo_de_ronda.wait_time
@@ -42,9 +43,12 @@ func start_show():
 	telon_echado.hide()
 	await get_tree().create_timer(1).timeout
 	var puntosRonda = Validator.resumen_inventario()
-	componentes_label.text += puntosRonda[0]
-	afinacion_label.text += puntosRonda[1]
-	letra_label.text += puntosRonda[2]
+	componentes_label.text += str(puntosRonda[0])
+	afinacion_label.text += str(puntosRonda[1])
+	letra_label.text += str(puntosRonda[2])
+	recuentos_puntuacion.show()
+	await get_tree().create_timer(5).timeout
+	recuentos_puntuacion.hide()
 	pasar_de_ronda()
 	
 func _on_tiempo_de_ronda_timeout():

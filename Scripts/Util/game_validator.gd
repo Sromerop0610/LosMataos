@@ -1,5 +1,5 @@
 class_name GameValidator
-extends RefCounted
+extends Node
 
 class ResultadoValidacion:
 	var exito: bool = false
@@ -95,9 +95,9 @@ static func resumen_inventario() -> Array:
 	var pointsArray = [total_componentes,total_afinacion,total_componentes]
 
 	for carta in Inventario.inventario:
-		total_letra += carta.get("puntos_letras", 0)
-		total_afinacion += carta.get("afinacion", 0)
-		total_componentes += carta.get("componentes", 0)
+		total_letra += carta.get("puntos_letras")
+		total_afinacion += carta.get("afinacion")
+		total_componentes += carta.get("componentes")
 	return pointsArray
 
 	#
