@@ -12,7 +12,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 7,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
 		"fase": 0
 	},	{
 		"id": "basica2",
@@ -20,7 +20,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 8,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
 		"fase": 0
 	},	{
 		"id": "basica3",
@@ -28,7 +28,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 12,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
 		"fase": 0
 	},	
 	
@@ -38,8 +38,8 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 7,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 6,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor4.png",
 		"fase": 0
 	},	{
 		"id": "basica5",
@@ -47,15 +47,15 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 0,
 		"componentes": 1,
 		"afinacion": 8,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor5.png",
 		"fase": 0
 	},	{
 		"id": "basica6",
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 12,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 10,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor6.png",
 		"fase": 0
 	},
 	
@@ -68,7 +68,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 15,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
 		"fase": 1
 	},	{
 		"id": "media2",
@@ -76,7 +76,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 24,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
 		"fase": 1
 	},	{
 		"id": "media3",
@@ -84,7 +84,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 30,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
 		"fase": 1
 	},	
 	
@@ -94,16 +94,16 @@ const CARTAS: Array[Dictionary] = [
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 15,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 20,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor4.png",
 		"fase": 1
 	},	{
 		"id": "media5",
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 24,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 25,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor5.png",
 		"fase": 1
 	},	{
 		"id": "media6",
@@ -111,7 +111,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 0,
 		"componentes": 1,
 		"afinacion": 30,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor6.png",
 		"fase": 1
 	},
 	
@@ -124,7 +124,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 35,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
 		"fase": 2
 	},	{
 		"id": "grande2",
@@ -132,7 +132,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 42,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
 		"fase": 2
 	},	{
 		"id": "grande3",
@@ -140,31 +140,35 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 47,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
 		"fase": 2
-	},	{
+	},	
+	
+	# ESTAS SOLO SUBEN AFINACIÓN
+	
+	{
 		"id": "grande4",
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 35,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 40,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor4.png",
 		"fase": 2
 	},	{
 		"id": "grande5",
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 42,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 50,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor5.png",
 		"fase": 2
 	},	{
 		"id": "grande6",
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 47,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 60,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor6.png",
 		"fase": 2
 	},
 	
@@ -177,7 +181,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 65,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor1.png",
 		"fase": 3
 	},	{
 		"id": "gigante2",
@@ -185,7 +189,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 70,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor2.png",
 		"fase": 3
 	},	{
 		"id": "gigante3",
@@ -193,33 +197,34 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 85,
 		"componentes": 1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor3.png",
 		"fase": 3
 	},	
+	
 	# ESTAS SOLO SUMAN AFINACION +
 	{
 		"id": "gigante4",
 		"title": "Afinación pequeña",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 65,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 60,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor4.png",
 		"fase": 3
 	},	{
 		"id": "gigante5",
 		"title": "Afinación mediana",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 75,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 65,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor5.png",
 		"fase": 3
 	},	{
 		"id": "gigante6",
 		"title": "Afinación perfecta",
 		"puntos_letras": 0,
 		"componentes": 1,
-		"afinacion": 85,
-		"ruta_sprite": "res://icon.svg",
+		"afinacion": 70,
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor6.png",
 		"fase": 3
 	}, 
 	
@@ -231,7 +236,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -10,
 		"componentes": 1,
 		"afinacion": 50,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor7.png",
 		"fase": 3
 	},
 	{
@@ -240,7 +245,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -15,
 		"componentes": 1,
 		"afinacion": 55,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor8.png",
 		"fase": 3
 	},
 	{
@@ -249,7 +254,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -20,
 		"componentes": 1,
 		"afinacion": 60,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://Assets/Mascaras/Sprite_MascaraMejor9.png",
 		"fase": 3
 	},
 	
@@ -261,7 +266,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 50,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -270,7 +275,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 55,
 		"componentes": 1,
 		"afinacion": -15,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -279,7 +284,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 60,
 		"componentes": 1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	
@@ -291,7 +296,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 30,
 		"componentes": -1,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -300,7 +305,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 0,
 		"componentes": -1,
 		"afinacion": 30,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -309,7 +314,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 15,
 		"componentes": -1,
 		"afinacion": 15,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},	
 	{
@@ -318,10 +323,11 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -10,
 		"componentes": -1,
 		"afinacion": -10,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 
+# ------------------------------------------------------------------- <3
 	# ESPECIALES AUTORES - Aparecen solo en la final
 	{
 		"id": "especial_variable4",
@@ -329,7 +335,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 90,
 		"componentes": 2,
 		"afinacion": 0,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -338,7 +344,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 120,
 		"componentes": 2,
 		"afinacion": 90,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3,
 	},
 	{
@@ -347,7 +353,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": 150,
 		"componentes": 1,
 		"afinacion": -100,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 	{
@@ -356,7 +362,7 @@ const CARTAS: Array[Dictionary] = [
 		"puntos_letras": -100,
 		"componentes": 1,
 		"afinacion": 150,
-		"ruta_sprite": "res://icon.svg",
+		"ruta_sprite": "res://icon.svg", # <- TERMINAR
 		"fase": 3
 	},
 		{
