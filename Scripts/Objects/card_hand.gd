@@ -1,34 +1,65 @@
 extends Node2D
 
 const MANO_MAXIMA: int = 3
-const CARTAS_POOL := card_pool.CARTAS
 
-# Precargar la escena de la carta
 const carta_scene = preload("res://Scenes/carta.tscn")
-
+@export var sepCarta = 200
 var mano: Array = []
+var inventario_jugador: Array = []
+var fase_actual: int = 0
 
 func crear_carta_aleatoria() -> carta_base:
-	var data: Dictionary = CARTAS_POOL.pick_random()
-	var carta = carta_scene.instantiate()
+
+	var data: Dictionary = card_pool.generar_carta_aleatoria(fase_actual)
+	var carta: carta_base = carta_scene.instantiate()
 	carta.crear_carta(data)
+	add_child(carta)
 	return carta
 
 func robar_carta():
-	while mano.size() < MANO_MAXIMA:
-		var carta := crear_carta_aleatoria()  # también falta esta lógica
+	print("robando cartas")
+	flush_mano()
+	mano.clear()
+	for i in range(MANO_MAXIMA):
+		var carta := crear_carta_aleatoria()
+		carta.global_position.x = 280 + (200*i);
+		carta.global_position.y= 450;
+	
 		mano.append(carta)
 	return mano
 
-func flush_mano(mano):
+func flush_mano():
 	for carta in mano:
 		carta.queue_free()
-	return mano
+		
+func disable_mano():
+	for carta in mano:
+		carta.disable_button()
 
-# Called when the node enters the scene tree for the first time.
+#func inventario_ronda(carta_seleccionada: carta_base):
+	#var carta_data := {
+		#"id": carta_seleccionada.id,
+		#"title": carta_seleccionada.title,
+		#"puntos_letras": carta_seleccionada.puntos_letras,
+		#"componentes": carta_seleccionada.componentes,
+		#"afinacion": carta_seleccionada.afinacion
+	#}
+	#
+	#inventario_jugador.append(carta_data)
+	#
+	#print("Carta añadida: ", carta_data.title)
+	#print("Total en inventario: ", inventario_jugador.size())
+	#flush_mano()
+	#mano.clear()
+	#robar_carta()
+
 func _ready() -> void:
-	pass # Replace with function body.
+	GlobalSignals.cartaRobada.connect(robar_carta)
+	GlobalSignals.roundPassed.connect(pasar_ronda)
+	robar_carta()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func pasar_ronda():
+	fase_actual+=1
+
 func _process(delta: float) -> void:
 	pass

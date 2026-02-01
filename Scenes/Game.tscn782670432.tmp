@@ -119,6 +119,7 @@ scale = Vector2(14.953125, 5.7916665)
 texture = ExtResource("3_kldst")
 
 [node name="TelonEchado" type="Sprite2D" parent="." unique_id=1271411577]
+visible = false
 position = Vector2(478.99997, 201.00002)
 scale = Vector2(10.031251, 4.21875)
 texture = ExtResource("1_gl6un")

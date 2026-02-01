@@ -3,12 +3,17 @@ extends Node
 var inventario: Array = []
 var objetoMascara: mascara
 
+func _ready():
+	GlobalSignals.StartingShow.connect(sumarPuntosInventario)
 
-func llenarInventario(mascaraNueva:mascara):
-	inventario.append(mascaraNueva)
+func llenarInventario(cartaNueva:carta_base):
+	inventario.append(cartaNueva.duplicate())
 
 func sumarPuntosInventario():
+	print("A printear inventario")
 	var sumaTotal = 0
-	for i in inventario:
-		sumaTotal += objetoMascara.Puntos.sumarPuntos(inventario)
-		
+	for mascara in inventario:
+		print("PUNTOS TOTALES: " + str(mascara.componentes))
+
+func vaciarInventario():
+	inventario.clear()
