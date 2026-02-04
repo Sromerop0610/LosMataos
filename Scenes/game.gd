@@ -85,6 +85,7 @@ func pasar_de_ronda():
 	Puntos.resetPuntuaciones()
 	GlobalSignals.cartaRobada.emit()
 	#telon_echado.show()
+	actualizar_requisitos()
 	animation_player.play("round_start")
 	await animation_player.animation_finished
 	mano.show()
@@ -106,7 +107,7 @@ func actualizar_requisitos():
 	letra_label_2.text = "LETRA:"
 	puntos_totales_label.text = "TOTALES:"
 	componentes_label_2.text += str(game_config.COMPONENTES_MINIMO) + "-"+ str(game_config.COMPONENTES_MAXIMO)
-	afinacion_label_2.text += str(int(dic.get("peso_afinacion")*100))
-	letra_label_2.text += str(int(dic.get("peso_letra")*100))
+	afinacion_label_2.text += str(int(dic.get("peso_afinacion")*puntos_totales))
+	letra_label_2.text += str(int(dic.get("peso_letra")*puntos_totales))
 	puntos_totales_label.text += str(puntos_totales)
 	

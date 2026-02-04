@@ -9,6 +9,11 @@ font_size = 18
 [sub_resource type="LabelSettings" id="LabelSettings_tf4ic"]
 font_size = 48
 
+[sub_resource type="LabelSettings" id="LabelSettings_ou15q"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_b87lp"]
+
 [node name="MenuPrincipal" type="Control" unique_id=71079035]
 layout_mode = 3
 anchors_preset = 15
@@ -153,7 +158,89 @@ position = Vector2(492.5, 270)
 scale = Vector2(7.5078125, 7.5)
 texture = ExtResource("2_xcfe6")
 
+[node name="HelpLayer" type="Control" parent="." unique_id=684191243]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -469.0
+offset_top = -280.0
+offset_right = 684.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8388487, 0.8388487)
+
+[node name="ColorRect" type="ColorRect" parent="HelpLayer" unique_id=692553127]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="HelpLayer" unique_id=1144029961]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_top = 48.0
+offset_right = 178.5
+offset_bottom = 136.0
+grow_horizontal = 2
+text = "Cómo Jugar"
+label_settings = SubResource("LabelSettings_ou15q")
+
+[node name="Label2" type="Label" parent="HelpLayer" unique_id=1375401822]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.5394
+offset_top = -115.5
+offset_right = 569.1178
+offset_bottom = 115.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Falla al Fallo
+          Instrucciones básicas del juego
+
+Necesitas llegar a una cantidad de puntos que se especificará en la esquina superior izquierda de la pantalla, pero tienes que tener en cuenta que la barra de \"Componentes\" necesitas estar en un rango entre números para pasar al siguiente nivel (Las otras dos barras se encargan de hacer medias con sus respectivos puntuajes).
+
+Debajo de la pantalla se muestran tres máscaras, algunas suman otras restan... Tendrás que ir jugando mediante estas máscaras para ganar.
+
+Esto es un juego para pensar, por lo que los porcentajes de cada barra no se muestran en ningún momento, así que tendrás que ayudarte de tu propio ingenio para saber en todo momento cuales son tus puntuaciones."
+label_settings = SubResource("LabelSettings_b87lp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="ButtonEntendido" type="Button" parent="HelpLayer" unique_id=927998916]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -88.0
+offset_right = 43.5
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Entendido"
+
 [connection signal="pressed" from="Creditos/Volver" to="." method="_on_volver_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="CreditosButton" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="HelpLayer/ButtonEntendido" to="." method="_on_volver_pressed"]

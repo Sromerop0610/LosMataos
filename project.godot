@@ -26,6 +26,7 @@ Validator="*uid://b347gdq0x88ym"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/stretch/mode="canvas_items"
 
 [file_customization]
 

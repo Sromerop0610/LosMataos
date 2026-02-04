@@ -1,12 +1,13 @@
 extends Control
 
-@onready var play_button = $BotonesMenu/PlayButton
-@onready var options_button = $BotonesMenu/OptionsButton
-@onready var quit_button = $BotonesMenu/QuitButton
-@onready var volver = $Creditos/Volver
+@onready var play_button = $PlayButton
+@onready var options_button = $OptionsButton
+@onready var quit_button = $QuitButton
+@onready var creditos_button = $CreditosButton
 
 @onready var creditos = $Creditos
 @onready var botones_menu = $BotonesMenu
+@onready var help_layer = $HelpLayer
 
 func _on_quit_button_pressed():
 	get_tree().quit()
@@ -26,3 +27,8 @@ func _on_volver_pressed():
 func _on_creditos_button_pressed():
 	botones_menu.hide()
 	creditos.show()
+
+
+func _on_options_button_pressed():
+	help_layer.show()
+	
